@@ -1,13 +1,15 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login';
-import TestComp from './TestComp';
 
 function App() {
   return (
-    <div>
-      <Login />
-      <TestComp />
-    </div>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Login />
+      </BrowserRouter>
+    </React.StrictMode>
   );
 }
 
