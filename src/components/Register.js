@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -23,7 +23,7 @@ function Register() {
     setUsername("");
     setPassword("");
 
-    navigate("/login");
+    // navigate("/login");
   };
 
   return (
@@ -73,7 +73,7 @@ function Register() {
         >
           Register
         </Button>
-        <Button variant="contained" onClick={() => navigate("/login")}>
+        <Button variant="contained">
           Go to Login
         </Button>
       </Box>

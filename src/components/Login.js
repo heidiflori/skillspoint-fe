@@ -3,7 +3,6 @@ import { BrowserRouter as Routes, Route, Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Container, TextField } from '@mui/material';
-import Register from './Register';
 
 function checkUsername(event) {
     event.preventDefault();
@@ -41,14 +40,8 @@ function checkCredentials(event) {
 }
 
 function Login() {
-    // const checkCredentials = () => {
-    //   // Add your logic here to check the credentials
-    // };
-  
     return (
-      <Routes>
-        <Route path="/" element={<Container
-          sx={{
+        <Container sx={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -57,8 +50,7 @@ function Login() {
             alignItems: 'center',
             border: '1px solid black',
             width: '50%',
-          }}
-        >
+          }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <TextField
               sx={{ padding: 1, margin: 1 }}
@@ -77,24 +69,18 @@ function Login() {
             />
           </Box>
           <Box>
-            <Link to="/">
               <Button
                 sx={{ padding: 1, margin: 1 }}
                 variant="contained"
-                onClick={checkCredentials}
+                onClick={(checkCredentials)}
               >
                 Log in
               </Button>
-            </Link>
-            <Link to="/register">
               <Button sx={{ padding: 1, margin: 1 }} variant="contained">
                 Register
               </Button>
-            </Link>
           </Box>
-        </Container>}/>
-        <Route path="/register" element={<Register />} />
-      </Routes>
+        </Container>
     );
   }
 
