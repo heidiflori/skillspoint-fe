@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Routes, Route, Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 import { Container, TextField } from '@mui/material';
 
 function checkUsername(event) {
@@ -40,6 +41,12 @@ function checkCredentials(event) {
 }
 
 function Login() {
+    const navigate = useNavigate();
+
+    function handleRegisterClick() {
+        let path = '/register';
+        navigate(path);
+    }
     return (
         <Container sx={{
             display: 'flex',
@@ -76,7 +83,7 @@ function Login() {
               >
                 Log in
               </Button>
-              <Button sx={{ padding: 1, margin: 1 }} variant="contained">
+              <Button sx={{ padding: 1, margin: 1 }} variant="contained" onClick={handleRegisterClick}>
                 Register
               </Button>
           </Box>

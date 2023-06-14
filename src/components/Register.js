@@ -50,16 +50,16 @@ function Register() {
             required
             id="first_name_textfield"
             label="First name"
-            value={username}
-            onChange={handleUsernameChange}
+            // value={username}
+            // onChange={handleUsernameChange}
             placeholder="First name" />
 
           <TextField sx={{ marginBottom: "10px" }}
             required
             id="last_name_textfield"
             label="Last name"
-            value={username}
-            onChange={handleUsernameChange}
+            // value={username}
+            // onChange={handleUsernameChange}
             placeholder="Last name" />
         </Box>
 
@@ -67,8 +67,8 @@ function Register() {
           required
           id="email_textfield"
           label="Email"
-          value={username}
-          onChange={handleUsernameChange}
+          // value={username}
+          // onChange={handleUsernameChange}
           placeholder="Enter your email address" />
 
         <TextField
@@ -86,7 +86,7 @@ function Register() {
           id="password_textfield"
           label="Password"
           type="password"
-          value={password}
+          // value={password}
           onChange={handlePasswordChange}
           placeholder="Enter your Password"
         />
@@ -97,7 +97,7 @@ function Register() {
           id="confirm_password_textfield"
           label="Confirm password"
           type="password"
-          value={password}
+          // value={password}
           onChange={handlePasswordChange}
           placeholder="Confirm password"
         />
