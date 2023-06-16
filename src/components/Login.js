@@ -34,9 +34,13 @@ function checkPassword(event) {
 function checkCredentials(event) {
     event.preventDefault();
     if (checkPassword(event) && checkUsername(event)) {
-        alert('Login successful');
+      document.querySelector('#username_textfield').value = '';
+      document.querySelector('#password_textfield').value = '';
+        return true;
     } else {
-        alert('Wrong username and/or password!');
+      document.querySelector('#username_textfield').value = '';
+      document.querySelector('#password_textfield').value = '';
+        return false;
     }
 }
 
@@ -46,6 +50,15 @@ function Login() {
     function handleRegisterClick() {
         let path = '/register';
         navigate(path);
+    }
+
+    function handleLoginClick(event) {
+      if(checkCredentials(event)) {
+        let path = '/home';
+        navigate(path)
+      } else {
+        alert('Invalid username/password')
+      }
     }
     return (
         <Container sx={{
@@ -57,6 +70,7 @@ function Login() {
             alignItems: 'center',
             border: '1px solid black',
             width: '50%',
+            marginTop: 1
           }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <TextField
@@ -79,7 +93,7 @@ function Login() {
               <Button
                 sx={{ padding: 1, margin: 1 }}
                 variant="contained"
-                onClick={(checkCredentials)}
+                onClick={(handleLoginClick)}
               >
                 Log in
               </Button>
