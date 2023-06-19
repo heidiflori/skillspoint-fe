@@ -10,6 +10,7 @@ import TrainingBrowser from './components/TrainingBrowser';
 import EnrolledTrainings from './components/EnrolledTrainings';
 import UserTrainings from './components/UserTrainings';
 import Profile from './components/Profile';
+import TrainingDetails from './components/TrainingDetails';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/trainings/enrolled' exact element={<EnrolledTrainings />} />
         <Route path='/mytrainings' exact element={<UserTrainings />} />
         <Route path="/profile" exact element={<Profile />} />
+        <Route path="/training-details" exact element={<TrainingDetails/>}/>
         {/* <Footer /> */}
       </Routes>
   );
