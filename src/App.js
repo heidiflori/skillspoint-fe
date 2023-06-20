@@ -9,6 +9,7 @@ import EnrolledTrainings from './pages/EnrolledTrainings';
 import UserTrainings from './pages/UserTrainings';
 import Profile from './pages/Profile';
 import Requested from './pages/Requested';
+import RequestTraining from './pages/RequestTraining';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/mytrainings' exact element={<UserTrainings />} />
         <Route path="/profile" exact element={<Profile />} />
         <Route path="/requested" exact element={<Requested />} />
+        <Route path="/request-training" exact element={<RequestTraining />} />        
         {/* <Footer /> */}
       </Routes>
   );
