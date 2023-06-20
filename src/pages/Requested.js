@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar';
-import Training from './Training';
-import SearchBar from './SearchBar';
+import Navbar from '../components/Navbar';
+import Training from '../components/Training';
+import SearchBar from '../components/SearchBar';
 import { Button } from '@mui/material';
 
 function Requested() {

@@ -1,9 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from './Footer'
-import Training from "./Training";
+import Navbar from "../components/Navbar";
+import Training from "../components/Training";
 import '../styles/heading.css';
-import Slideshow from "./Slideshow";
+import Slideshow from "../components/Slideshow";
 
 function Home() {
     return (

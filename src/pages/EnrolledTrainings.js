@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Training from './Training';
+import Navbar from '../components/Navbar';
+import Training from '../components/Training';
 
 function EnrolledTrainings() {
     return (
