@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 function Training() {
     const [courses, setCourses] = useState([]);
     const [visibleCourses, setVisibleCourses] = useState(6);
@@ -8,7 +9,7 @@ function Training() {
     useEffect(() => {
         async function fetchCourses() {
             try {
-                const response = await fetch('http://localhost:3000/courses');
+                const response = await fetch('http://localhost:3001/courses');
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
                 }

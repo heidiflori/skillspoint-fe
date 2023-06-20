@@ -21,8 +21,11 @@ function Navbar() {
                     <li className="nav-item" style={{paddingRight: 10}}>
                         <Link to="/trainings/enrolled" className={`nav-link ${isActive("/trainings/enrolled")}`}>Enrolled</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/mytrainings" className={`nav-link ${isActive("/mytrainings")}`}>My trainings</Link>
+                    </li> */}
+                    <li className="nav-item">
+                        <Link to="/requested" className={`nav-link ${isActive("/requested")}`}>Requested trainings</Link>
                     </li>
                 </ul>
             </div>
