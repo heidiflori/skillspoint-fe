@@ -1,0 +1,150 @@
+{
+    "courses": [
+        [
+            {
+                "title": "Communication and negotiation",
+                "trainer": "Stefan Rentia",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#FFDAB9"
+            },
+            {
+                "title": "Time Management",
+                "trainer": "Andra-Beatrice Olteanu",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#E6E6FA"
+            },
+            {
+                "title": "Problem Solving and Critical Thinking",
+                "trainer": "Marius Tanase",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#F0FFFF"
+            },
+            {
+                "title": " Project Management Fundamentals",
+                "trainer": "Adriana Voica",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#FFDAB9"
+            },
+            {
+                "title": "Financial Management for Non-Financial Managers",
+                "trainer": "Andrei Ghita",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#F0FFFF"
+            },
+            {
+                "title": "Effective Business Communication and Presentation Skills",
+                "trainer": "Madalina Vantu Popa",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#E6E6FA"
+            },
+            {
+                "title": "Machine Learning Foundations",
+                "trainer": "Ion Ionescu",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#FFDAB9"
+            },
+            {
+                "title": "Advanced Python Programming",
+                "trainer": "George Georgescu",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#E6E6FA"
+            },
+            {
+                "title": " Cybersecurity Essentials",
+                "trainer": "Ion Georgescu",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#FFDAB9"
+            },
+            {
+                "title": "Communication and negotiation",
+                "trainer": "Stefan Rentia",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#F0FFFF"
+            },
+            {
+                "title": "Communication and negotiation",
+                "trainer": "Stefan Rentia",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#FFDAB9"
+            },
+            {
+                "title": "Communication and negotiation",
+                "trainer": "Stefan Rentia",
+                "description": "Throughout the training, participants will explore the core principles and strategies that underpin effective communication and negotiation. They will learn how to adapt their communication style to different situations and stakeholders, express themselves clearly and assertively, and actively listen to understand others perspectives.s.",
+                "occupied_slots": 0,
+                "maximum_slots": 25,
+                "type": "Soft skills",
+                "duration": "4h",
+                "status": "waiting",
+                "admin_approval": "pending",
+                "bg_color": "#E6E6FA"
+            }
+        ]
+    ]
+}
