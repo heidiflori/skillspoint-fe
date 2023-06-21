@@ -34,17 +34,18 @@ function TrainingDetails() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={{
-          display: "flex",
-          justifyContent: "center",
-          alighItems: "center",
-          backgroundColor: "#004d40",
-          width: "800",
-          height: "600",
-          minHeight: "100vh"
-        }}>
-
-          <div style={style} >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alighItems: "center",
+            backgroundColor: "#004d40",
+            width: "800",
+            height: "600",
+            minHeight: "100vh",
+          }}
+        >
+          <div style={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               Title
             </Typography>
