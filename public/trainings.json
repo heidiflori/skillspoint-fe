@@ -147,7 +147,8 @@
       }
     ]
   ],
-  "training-requests": [],
+  "training-requests": [
+  ],
   "training-create": [
   ]
 }

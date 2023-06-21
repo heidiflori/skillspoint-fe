@@ -53,7 +53,7 @@ function Login() {
 
   function handleLoginClick(event) {
     if (checkCredentials(event)) {
-      let path = "/tracks";
+      let path = "/home";
       navigate(path);
     } else {
       alert('Invalid username/password');

@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import '../styles/astyles.css';
 
 const CreateTrainingForm = () => {
 
@@ -42,18 +43,21 @@ const CreateTrainingForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div class="form-group">
-                <label>Title</label>
-                <input class="form-control" required type="text" name='title' value={input.title} onChange={handleChangeInput} />
-            </div>
-            <div class="form-group">
-                <label>Description</label>
-                <textarea class="form-control" required type="text" name='description' value={input.description} onChange={handleChangeInput} />
-            </div>
-            
-            <button  class="btn btn-primary" type='submit'>Submit</button>
-        </form>
+        <div class="form-container">
+            <form onSubmit={handleSubmit}>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input class="form-control" required type="text" name='title' value={input.title} onChange={handleChangeInput} />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" required type="text" name='description' value={input.description} onChange={handleChangeInput} />
+                </div>
+                
+                <button class="btn btn-primary" type='submit'>Submit</button>
+            </form>
+        </div>
+
     );
 }
 
