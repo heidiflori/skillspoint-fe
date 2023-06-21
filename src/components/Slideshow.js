@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Carousel, CarouselItem } from "react-bootstrap";
+import apiUrl from '../apiConfig.js';
 
 function Slideshow() {
     const [courses, setCourses] = useState([]);
@@ -8,7 +9,7 @@ function Slideshow() {
     useEffect(() => {
         async function fetchCourses() {
             try {
-                const response = await fetch('http://localhost:3001/courses');
+                const response = await fetch(apiUrl + '/courses');
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
                 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import apiUrl from '../apiConfig.js';
 
 
 function Training() {
@@ -9,7 +10,7 @@ function Training() {
     useEffect(() => {
         async function fetchCourses() {
             try {
-                const response = await fetch('http://localhost:3001/courses');
+                const response = await fetch(apiUrl + '/courses');
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
                 }

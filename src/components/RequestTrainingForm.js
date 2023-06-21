@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import apiUrl from '../apiConfig.js';
 
 const RequestTrainingForm = () => {
 
@@ -13,14 +14,14 @@ const RequestTrainingForm = () => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInput((values) => ({...values, [name]: value}));
+        setInput((values) => ({ ...values, [name]: value }));
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const path = "http://localhost:3001/training-requests";
-        const body = {...input, user};
+        const path = apiUrl + "/training-requests";
+        const body = { ...input, user };
 
         const response = await fetch(path, {
             method: "POST",

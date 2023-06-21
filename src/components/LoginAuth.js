@@ -2,7 +2,7 @@ import { useRef, useContext, useState } from "react";
 import { useHistory, useNavigate, Navigate } from "react-router-dom";
 import AuthContext from "../../store/auth-context";
 import { Container, TextField, Button } from '@mui/material';
-
+import apiUrl from '../apiConfig.js';
 function LoginAuth() {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -22,9 +22,8 @@ function LoginAuth() {
     const enteredPassword = passwordInputRef.current.value;
 
     setIsLoading(true);
-    let url = "https://skillspoint-be-q4srtfuewa-oa.a.run.app/";
 
-    fetch(url, {
+    fetch(apiUrl, {
       method: "POST",
       body: JSON.stringify({
         email: enteredEmail,

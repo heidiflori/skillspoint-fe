@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import apiUrl from '../apiConfig.js';
 
 const CreateTrainingForm = () => {
 
@@ -21,14 +22,14 @@ const CreateTrainingForm = () => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInput((values) => ({...values, [name]: value}));
+        setInput((values) => ({ ...values, [name]: value }));
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const path = "http://localhost:3001/training-create";
-        const body = {...input, user};
+        const path = apiUrl + "/training-create";
+        const body = { ...input, user };
 
         const response = await fetch(path, {
             method: "POST",
@@ -51,8 +52,8 @@ const CreateTrainingForm = () => {
                 <label>Description</label>
                 <textarea class="form-control" required type="text" name='description' value={input.description} onChange={handleChangeInput} />
             </div>
-            
-            <button  class="btn btn-primary" type='submit'>Submit</button>
+
+            <button class="btn btn-primary" type='submit'>Submit</button>
         </form>
     );
 }
