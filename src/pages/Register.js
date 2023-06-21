@@ -1,5 +1,5 @@
 import { Box, Button, Container, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 //TODO: check first name and last name
@@ -64,7 +64,7 @@ function checkPassword(event) {
   
   let numberOfSpecialCharacters = 0;
   for(let i=0;i<firstPassword.length;i++) {
-    if(firstPassword[i] == '.' || firstPassword[i] == ',' || firstPassword[i] == '/' || firstPassword[i] == '!' || firstPassword[i] == '@') {
+    if(firstPassword[i] === '.' || firstPassword[i] === ',' || firstPassword[i] === '/' || firstPassword[i] === '!' || firstPassword[i] === '@') {
       numberOfSpecialCharacters++;
     }
   }

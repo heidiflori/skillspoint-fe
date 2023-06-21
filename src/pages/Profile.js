@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 function Profile() {
     return (
@@ -12,7 +12,7 @@ function Profile() {
                             <div className="text-center p-3">
                                 <img
                                     src="https://community.concur.com/t5/image/serverpage/image-id/609iE93CA14D568A373E/image-size/large/is-moderation-mode/true?v=v2&px=999"
-                                    alt="Profile Picture"
+                                    alt="Profile"
                                     className="rounded-circle"
                                     style={{ width: '150px', height: '180px' }}
                                 />

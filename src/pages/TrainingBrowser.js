@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
-import Training from "./Training";
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
+import Training from "../components/Training";
 import { Button } from "@mui/material";
 
 function TrainingBrowser() {
