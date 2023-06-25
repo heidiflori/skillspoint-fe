@@ -8,6 +8,8 @@ import AuthContext from "../store/auth-context";
 import apiUrl from '../apiConfig';
 import Footer from "../components/Footer";
 import { useTheme } from '@mui/material/styles';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 /*
 function checkUsername(event) {
@@ -58,6 +60,7 @@ function Login() {
 
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const usernameInputRef = useRef();
   const passwordInputRef = useRef();
@@ -108,7 +111,7 @@ function Login() {
         return res.json();
       } else {
         return res.json().then((data) => {
-          let errorMessage = "Authentication failed!";
+          let errorMessage = " Please check your username and password and try again.";
           if (data && data.error && data.error.message) {
             errorMessage = data.error.message;
           }
@@ -123,7 +126,7 @@ function Login() {
       // history.replace('/');
       navigate('/home');
     }).catch(err => {
-      alert(err.message);
+      setErrorMessage(err.message);
     });
   };
 
@@ -136,6 +139,7 @@ function Login() {
         <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f", textShadow: '1px 1px rgba(0, 0, 0, 0.3)' }}>SkillMaster</p>
         <p style={{fontWeight: 'bold', fontSize:25, color:"#00474e", textShadow: '1px 1px rgba(0, 0, 0, 0.3)', textAlign: 'center', marginLeft: '10px', marginRight: '10px' }}>"Share your skills, master new ones"</p>
       </div>
+      {errorMessage && <p style={{ color: '#00474e',textAlign:'center', fontWeight: 'bold' }}><FontAwesomeIcon icon={faInfoCircle} />{errorMessage}</p>}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Container sx={{
           backgroundColor: 'white',
@@ -149,7 +153,7 @@ function Login() {
           minWidth: '350px',
           borderRadius: '10px',
           boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
-          marginTop: 2,
+          marginTop: 1,
           marginBottom:2,
           [theme.breakpoints.down('sm')]: {
             width: '90%',
