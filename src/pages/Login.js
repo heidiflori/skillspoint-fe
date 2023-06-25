@@ -6,6 +6,8 @@ import { useState, useRef, useContext } from "react";
 import { Container, TextField } from '@mui/material';
 import AuthContext from "../store/auth-context";
 import apiUrl from '../apiConfig';
+import Footer from "../components/Footer";
+import { useTheme } from '@mui/material/styles';
 
 /*
 function checkUsername(event) {
@@ -125,51 +127,70 @@ function Login() {
     });
   };
 
+  const theme = useTheme();
+
   return (
-    <Container sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      padding: 'auto',
-      margin: 'auto',
-      alignItems: 'center',
-      border: '1px solid black',
-      width: '50%',
-      marginTop: 1
-    }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-        <TextField
-          sx={{ padding: 1, margin: 1 }}
-          required
-          id="username_textfield"
-          label="Username"
-          placeholder="Enter your username. e.g: firstname.lastname"
-          inputRef={usernameInputRef}
-        />
-        <TextField
-          sx={{ padding: 1, margin: 1 }}
-          required
-          id="password_textfield"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-          inputRef={passwordInputRef}
-        />
-      </Box>
-      <Box>
-        <Button
-          sx={{ padding: 1, margin: 1 }}
-          variant="contained"
-          onClick={handleLoginClick}
-        >
-          Log in
-        </Button>
-        <Button sx={{ padding: 1, margin: 1 }} variant="contained" onClick={handleRegisterClick}>
-          Register
-        </Button>
-      </Box>
-    </Container>
-  );
+    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateRows: 'auto auto auto', alignItems: 'center', backgroundColor: "#eef5fa" }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', margin: 'auto' }}>
+        <img src="/logoapp.png" alt="descriptive text" style={{ width: '20%', height: 'auto' }} />
+        <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f" }}>SkillMaster</p>
+        <p style={{fontWeight: 'bold', fontSize:25, color:"#00474e" }}>"Share your skills, master new ones"</p>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Container sx={{
+          backgroundColor: 'white',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          padding: 'auto',
+          margin: 'auto',
+          alignItems: 'center',
+          width: '70%',
+          borderRadius: '10px',
+          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+          marginTop: 2,
+          marginBottom:2,
+          [theme.breakpoints.down('sm')]: {
+            width: '90%',
+          }
+        }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', padding: 3 }}>
+            <TextField
+              sx={{ padding: 1, margin: 1 }}
+              required
+              id="username_textfield"
+              label="Username"
+              placeholder="Enter your username. e.g: firstname.lastname"
+              inputRef={usernameInputRef}
+            />
+            <TextField
+              sx={{ padding: 1, margin: 1 }}
+              required
+              id="password_textfield"
+              label="Password"
+              placeholder="Enter your password"
+              type="password"
+              inputRef={passwordInputRef}
+            />
+          </Box>
+          <Box>
+            <Button
+              sx={{ padding: 1, margin: 1, fontWeight: 'bold', backgroundColor: '#00838f', color: '#fff','&:hover': {backgroundColor: '#004d40'}}}
+              variant="contained"
+              onClick={handleLoginClick}
+            >
+              Log in
+            </Button>
+            <Button sx={{ padding: 1, margin: 1, fontWeight: 'bold',backgroundColor: '#00838f', color: '#fff','&:hover': {backgroundColor: '#004d40'}}} variant="contained" onClick={handleRegisterClick}>
+              Register
+            </Button>
+          </Box>
+        </Container>
+      </div>
+      <Footer style={{ gridRow: '3' }}/>
+    </div>
+);
+
 }
 
 export default Login;
