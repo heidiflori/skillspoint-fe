@@ -1,0 +1,66 @@
+.btn-primary {
+    background-color: #00838f;
+    margin-top: 10px;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e0f7fa;
+    color: #00838f;
+}
+
+.btn-secondary {
+    background-color: #8f2100;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-control {
+    margin: 10px 10px 10px 0px;
+}
+
+
+.form-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    width: 60%;
+    padding: 40px;
+    border-radius: 20px;
+    border-color: #00838f;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 10px 10px 0px;
+    
+}
+
+.requested-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+    padding: 40px;
+    /* border: 1px solid; */
+    
+}
+
+.requested-training-card {
+    padding: 20px 30px 30px 30px;
+    flex: 0 1 calc(50% - 10px);
+    /* border: 1px solid; */
+    border-radius: 20px;
+    background-color: #f0f7f4;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
