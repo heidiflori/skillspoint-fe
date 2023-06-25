@@ -133,8 +133,8 @@ function Login() {
     <div style={{ minHeight: '100vh', display: 'grid', gridTemplateRows: 'auto auto auto', alignItems: 'center', backgroundColor: "#eef5fa" }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', margin: 'auto' }}>
         <img src="/logoapp.png" alt="descriptive text" style={{ width: '20%', height: 'auto' }} />
-        <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f" }}>SkillMaster</p>
-        <p style={{fontWeight: 'bold', fontSize:25, color:"#00474e" }}>"Share your skills, master new ones"</p>
+        <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f", textShadow: '1px 1px rgba(0, 0, 0, 0.3)' }}>SkillMaster</p>
+        <p style={{fontWeight: 'bold', fontSize:25, color:"#00474e", textShadow: '1px 1px rgba(0, 0, 0, 0.3)' }}>"Share your skills, master new ones"</p>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Container sx={{
