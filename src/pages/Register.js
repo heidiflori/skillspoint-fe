@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import apiUrl from '../apiConfig.js';
+import { useTheme } from '@mui/material/styles';
+import Footer from "../components/Footer";
 
 //TODO: check first name and last name
 // we need documentation for this
@@ -155,89 +157,111 @@ function Register() {
 
   }
 
+  const theme = useTheme();
+
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "50px",
-      }}
-    >
-      <Box
+    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateRows: 'auto auto auto', alignItems: 'center', backgroundColor: "#eef5fa" }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', margin: 'auto' }}>
+        <img src="/logoapp.png" alt="descriptive text" style={{ width: '20%', height: 'auto' }} />
+        <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f", textShadow: '1px 1px rgba(0, 0, 0, 0.3)' }}>SkillMaster</p>
+        <p style={{fontWeight: 'bold', fontSize:25, color:"#00474e", textShadow: '1px 1px rgba(0, 0, 0, 0.3)', textAlign: 'center', marginLeft: '10px', marginRight: '10px' }}>CREATE YOUR ACCOUNT</p>
+      </div>
+      <Container
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          width: "300px",
-          marginBottom: "20px",
+          backgroundColor: 'white',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          padding: 'auto',
+          margin: 'auto',
+          alignItems: 'center',
+          width: '25%',
+          minWidth: '350px',
+          borderRadius: '10px',
+          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+          marginTop: 0.5,
+          marginBottom:2,
+          [theme.breakpoints.down('sm')]: {
+            width: '90%',
+          }
         }}
       >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "300px",
+            marginBottom: "20px",
+            marginTop:"20px"
+          }}
+        >
 
-        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-          <TextField sx={{ marginBottom: "10px", marginRight: "10px" }}
-            required
-            id="first_name_textfield"
-            label="First name"
-            // value={username}
-            // onChange={handleUsernameChange}
-            placeholder="First name" />
+          <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            <TextField sx={{ marginBottom: "10px", marginRight: "10px" }}
+              required
+              id="first_name_textfield"
+              label="First name"
+              // value={username}
+              // onChange={handleUsernameChange}
+              placeholder="First name" />
+
+            <TextField sx={{ marginBottom: "10px" }}
+              required
+              id="last_name_textfield"
+              label="Last name"
+              placeholder="Last name" />
+          </Box>
 
           <TextField sx={{ marginBottom: "10px" }}
             required
-            id="last_name_textfield"
-            label="Last name"
-            placeholder="Last name" />
+            id="email_textfield"
+            label="Email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Enter your email address" />
+
+          <TextField
+            sx={{ marginBottom: "10px" }}
+            required
+            id="username_textfield"
+            label="Username"
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder="Enter your username"
+          />
+          <TextField
+            sx={{ marginBottom: "10px" }}
+            required
+            id="password_textfield"
+            label="Password"
+            type="password"
+            placeholder="Enter your Password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+
+          <TextField
+            sx={{ marginBottom: "10px" }}
+            required
+            id="confirm_password_textfield"
+            label="Confirm password"
+            type="password"
+            placeholder="Confirm password"
+          />
         </Box>
 
-        <TextField sx={{ marginBottom: "10px" }}
-          required
-          id="email_textfield"
-          label="Email"
-          value={email}
-          onChange={handleEmailChange}
-          placeholder="Enter your email address" />
-
-        <TextField
-          sx={{ marginBottom: "10px" }}
-          required
-          id="username_textfield"
-          label="Username"
-          value={username}
-          onChange={handleUsernameChange}
-          placeholder="Enter your username"
-        />
-        <TextField
-          sx={{ marginBottom: "10px" }}
-          required
-          id="password_textfield"
-          label="Password"
-          type="password"
-          placeholder="Enter your Password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-
-        <TextField
-          sx={{ marginBottom: "10px" }}
-          required
-          id="confirm_password_textfield"
-          label="Confirm password"
-          type="password"
-          placeholder="Confirm password"
-        />
-      </Box>
-
-      <Box>
-        <Button
-          sx={{ marginRight: "10px" }}
-          variant="contained"
-          onClick={handleRegisterClick}
-        >
-          Register
-        </Button>
-      </Box>
-    </Container>
+        <Box>
+          <Button
+            sx={{ padding: 1, margin: 1, fontWeight: 'bold',backgroundColor: '#00838f', color: '#fff','&:hover': {backgroundColor: '#004d40'}}}
+            variant="contained"
+            onClick={handleRegisterClick}
+          >
+            Register
+          </Button>
+        </Box>
+      </Container>
+      <Footer />
+    </div>
   );
 }
 
