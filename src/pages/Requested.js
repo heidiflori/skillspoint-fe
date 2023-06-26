@@ -17,7 +17,7 @@ function Requested() {
                         <Button style={{color: "#00838f"}}>Request training</Button>
                     </Link>
                 </div>
-                <Training />
+                {/* <Training /> */}
             </div>
             <Footer />
         </>

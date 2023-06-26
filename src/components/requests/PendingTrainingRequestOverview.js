@@ -12,7 +12,7 @@ const PendingTrainingRequestOverview = () => {
     useEffect(() => {
         async function fetchRequestedTrainings() {
             try {
-                const response = await fetch(`${apiUrl}/api/training-requests/pending-requests`, {
+                const response = await fetch(`${apiUrl}/api/skills/training-requests/pending-requests`, {
                     method: "GET",
                     headers: {
                         "Access-Control-Allow-Origin": "*",

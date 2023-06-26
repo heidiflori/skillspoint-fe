@@ -120,9 +120,10 @@ function Login() {
     }).then(data => {
       const expiresIn = 500;
       const expirationTime = new Date(new Date().getTime() + (expiresIn * 1000));
-      
+
       Cookies.set('token', data.accessToken, { expires: expiresIn / (60 * 60 * 24) }); // Salvăm tokenul în cookies
       
+      console.log(expirationTime);
       authCtx.login(data.accessToken, expirationTime.toISOString());
       navigate('/home');
     }).catch(err => {

@@ -29,6 +29,10 @@
     margin: 10px 10px 10px 0px;
 }
 
+.form-select {
+    margin: 10px 10px 10px 0px;
+}
+
 .form-container {
     display: flex; 
     justify-content: center;

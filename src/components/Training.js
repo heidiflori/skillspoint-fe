@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import apiUrl from '../apiConfig.js';
 import Cookies from 'js-cookie';
 
+
 function Training() {
     const [courses, setCourses] = useState([]);
     const [visibleCourses, setVisibleCourses] = useState(6);
@@ -12,22 +13,18 @@ function Training() {
     useEffect(() => {
         async function fetchCourses() {
             try {
-                // const response = await fetch(apiUrl + '/courses');
-                const response = await fetch(`${apiUrl}/api/skills/trainings/approved-trainings`, {
-                    method: "GET",
-                     headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                    },
-                    // body: JSON.stringify(body),
+                const token = Cookies.get('token'); // preia tokenul
+                const response = await fetch(apiUrl + '/api/skills/trainings/approved-trainings', {
+                    headers: {
+                        'Authorization': `Bearer ${token}` // adauga tokenul in header
+                    }
                 });
-
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
                 }
                 const data = await response.json();
-                setCourses(data[0]);
+                console.log(data);
+                setCourses(data);
             } catch (error) {
                 console.error(error);
             }

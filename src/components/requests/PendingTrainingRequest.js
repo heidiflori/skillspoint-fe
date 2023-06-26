@@ -11,7 +11,7 @@ const PendingTrainingRequest = ({ trainingRequest }) => {
         event.preventDefault();
 
         // const path = `http://localhost:3001/requests/${trainingRequest.id}`;
-        const path = `${apiUrl}/requests/${trainingRequest.id}`;
+        const path = `${apiUrl}/api/skills/requests/${trainingRequest.id}`;
         // const path = `${apiUrl}/requests/pending-trainings`;
 
         const body = {
