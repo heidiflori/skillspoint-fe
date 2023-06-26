@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import apiUrl from '../apiConfig.js';
-
+import Cookies from 'js-cookie';
 
 function Training() {
     const [courses, setCourses] = useState([]);
     const [visibleCourses, setVisibleCourses] = useState(6);
     const [showLessVisible, setShowLessVisible] = useState(false);
 
+    const token = Cookies.get('token');
+
     useEffect(() => {
         async function fetchCourses() {
             try {
-                const response = await fetch(apiUrl + '/courses');
+                // const response = await fetch(apiUrl + '/courses');
+                const response = await fetch(`${apiUrl}/api/skills/trainings/approved-trainings`, {
+                    method: "GET",
+                     headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                    },
+                    // body: JSON.stringify(body),
+                });
+
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
                 }
@@ -22,7 +34,7 @@ function Training() {
         }
 
         fetchCourses();
-    }, []);
+    }, [token]);
 
     const showMoreCourses = () => {
         setVisibleCourses((prevVisibleCourses) => prevVisibleCourses + 6);

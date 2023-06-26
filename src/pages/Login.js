@@ -6,6 +6,7 @@ import { useState, useRef, useContext } from "react";
 import { Container, TextField } from '@mui/material';
 import AuthContext from "../store/auth-context";
 import apiUrl from '../apiConfig';
+import Cookies from 'js-cookie';
 
 /*
 function checkUsername(event) {
@@ -83,8 +84,6 @@ function Login() {
     const enteredUsername = usernameInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    // optional: add validation
-
     setIsLoading(true);
     
     const url = `${apiUrl}/api/auth/signin`;
@@ -116,14 +115,15 @@ function Login() {
     }).then(data => {
       const expiresIn = 500;
       const expirationTime = new Date(new Date().getTime() + (expiresIn * 1000));
-      console.log(expirationTime);
+      
+      Cookies.set('token', data.accessToken, { expires: expiresIn / (60 * 60 * 24) }); // Salvăm tokenul în cookies
+      
       authCtx.login(data.accessToken, expirationTime.toISOString());
-      // history.replace('/');
       navigate('/home');
     }).catch(err => {
       alert(err.message);
     });
-  };
+};
 
   return (
     <Container sx={{

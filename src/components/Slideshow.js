@@ -4,28 +4,46 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import apiUrl from '../apiConfig.js';
 
 function Slideshow() {
-    const [courses, setCourses] = useState([]);
+    // const [courses, setCourses] = useState([]);
+
+    // useEffect(() => {
+    //     async function fetchCourses() {
+    //         try {
+    //             // const response = await fetch(apiUrl + '/courses');
+    //             const response = await fetch(`${apiUrl}/api/trainings/approved-trainings`);
+    //             if (!response.ok) {
+    //                 throw new Error('Failed to fetch courses');
+    //             }
+    //             const data = await response.json();
+    //             setCourses(data[0]);
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     }
+
+    //     fetchCourses();
+    // }, []);
+    
+
+    const [trainings, setTrainings] = useState([]);
 
     useEffect(() => {
-        async function fetchCourses() {
+        const fetchTrainings = async () => {
             try {
-                const response = await fetch(apiUrl + '/courses');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch courses');
-                }
-                const data = await response.json();
-                setCourses(data[0]);
-            } catch (error) {
+                const response = await fetch(`${apiUrl}/api/trainings/approved-trainings`);
+                const responseTrainings = await response.json();
+                setTrainings(responseTrainings);
+            } catch(error) {
                 console.error(error);
             }
-        }
+        };
 
-        fetchCourses();
+        fetchTrainings();
     }, []);
 
     return (
         <Carousel className="container">
-            {courses.map((course, index) => (
+            {trainings.map((course, index) => (
                 <CarouselItem key={index}>
                     <div className="slide d-block justify-content-center align-items-center" style={{ backgroundColor: course.bg_color, height: '10rem' }}>
                         <h2 className="text-center">{course.title}</h2>
