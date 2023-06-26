@@ -3,6 +3,7 @@ import Navigationbar from "../components/Navigationbar";
 import SearchBar from "../components/SearchBar";
 import Training from "../components/Training";
 import { Button } from "@mui/material";
+import Footer from "../components/Footer";
 
 function TrainingBrowser() {
     return (
@@ -17,6 +18,7 @@ function TrainingBrowser() {
                     </div>
                 <Training />
             </div>
+            <Footer />
         </>
     )
 }

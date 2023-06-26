@@ -1,6 +1,6 @@
 import React from "react";
 import Navigationbar from "../components/Navigationbar";
-
+import Footer from "../components/Footer";
 function Profile() {
     return (
         <>
@@ -62,6 +62,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
