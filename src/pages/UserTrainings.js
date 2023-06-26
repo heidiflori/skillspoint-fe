@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navigationbar from "../components/Navigationbar";
 
 function UserTrainings() {
     return(
         <>
-            <Navbar />
+            <Navigationbar />
             my trainings
         </>
     )

@@ -1,13 +1,14 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navigationbar from "../components/Navigationbar";
 import Training from "../components/Training";
 import '../styles/heading.css';
 import Slideshow from "../components/Slideshow";
+import Footer from "../components/Footer";
 
 function Home() {
     return (
         <>
-            <Navbar />
+            <Navigationbar />
             <div className="container">
                 <div className="availabileTrainings">
                     <h3 style={{color: '#004d40', textAlign: 'center', marginTop: 50}}>Availabile trainings</h3>
@@ -23,7 +24,7 @@ function Home() {
                     <Training />
                 </div>
             </div>         
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

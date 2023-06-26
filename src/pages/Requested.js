@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+import Navigationbar from '../components/Navigationbar';
 import Training from '../components/Training';
 import SearchBar from '../components/SearchBar';
 import { Button } from '@mui/material';
@@ -7,7 +7,7 @@ import { Button } from '@mui/material';
 function Requested() {
     return (
         <>
-            <Navbar />
+            <Navigationbar />
             <SearchBar />
             <div className='container mt-5'>
                 <h2 className="text-center mt-4" style={{ color: "#00838f" }}>Requested trainings</h2>

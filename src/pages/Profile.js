@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navigationbar from "../components/Navigationbar";
 
 function Profile() {
     return (
         <>
-            <Navbar />
+            <Navigationbar />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6">
