@@ -1,19 +1,20 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navigationbar from "../components/Navigationbar";
 import SearchBar from "../components/SearchBar";
 import Training from "../components/Training";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 // import apiUrl from "../apiConfig";
 
+import Footer from "../components/Footer";
 
 function TrainingBrowser() {
     return (
         <>
-            <Navbar />
+            <Navigationbar />
             <SearchBar />
             <div className="container mt-4">
-                    <h2 className="text-center mt-4"  style={{color: "#00838f"}}>Browse trainings</h2>
+                    <h2 className="text-center mt-4"  style={{color: "#00474e"}}>Browse trainings</h2>
                     <div className="d-flex flex-column align-items-end mb-5">
                         <Link to="/create-training">
                             <Button style={{color: "#00838f"}}>Create training</Button>
@@ -24,6 +25,7 @@ function TrainingBrowser() {
                     </div>
                 <Training />
             </div>
+            <Footer />
         </>
     )
 }

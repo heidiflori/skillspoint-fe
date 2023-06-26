@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-
+import Navigationbar from "../components/Navigationbar";
+import Footer from "../components/Footer";
 function Profile() {
     return (
         <>
-            <Navbar />
+            <Navigationbar />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6">
@@ -62,6 +62,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
