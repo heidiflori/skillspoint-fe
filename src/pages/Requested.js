@@ -13,7 +13,7 @@ function Requested() {
                 <div className="d-flex flex-column align-items-end mb-5">
                     <Button style={{color: "#00474e"}}>Request training</Button>
                 </div>
-                <Training />
+                {/* <Training /> */}
             </div>
             <Footer />
         </>
