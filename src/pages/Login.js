@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { useTheme } from '@mui/material/styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import Cookies from 'js-cookie';
 
 /*
 function checkUsername(event) {
@@ -121,6 +122,9 @@ function Login() {
     }).then(data => {
       const expiresIn = 500;
       const expirationTime = new Date(new Date().getTime() + (expiresIn * 1000));
+
+      Cookies.set('token', data.accessToken, { expires: expiresIn / (60 * 60 * 24) }); // Salvăm tokenul în cookies
+      
       console.log(expirationTime);
       authCtx.login(data.accessToken, expirationTime.toISOString());
       // history.replace('/');
