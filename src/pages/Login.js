@@ -160,6 +160,7 @@ function Login() {
           }
         }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', padding: 3 }}>
+          <p style={{fontSize:22, color:"#5E5E5E", textAlign: 'center', marginLeft: '10px', marginRight: '10px' }}>Log in to your account</p>
             <TextField
               sx={{ padding: 1, margin: 1 }}
               required
