@@ -3,7 +3,7 @@ import React from "react";
 
 function SearchBar() {
     return (
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-center">
             <div className="input-group w-25 m-3">
                 <input type="text" className="form-control" placeholder="Search..." />
                 <div className="input-group-append">

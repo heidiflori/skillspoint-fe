@@ -19,6 +19,18 @@ function Navigationbar() {
         borderBottom: "3px solid #FFFFFF" 
     };
 
+    const hoverStyle = {
+        backgroundColor: "#006064",
+        cursor: "pointer",
+        borderRadius: '5px',
+        transition: 'background-color 0.3s ease-in-out'
+        
+    };
+
+    const linkStyle = {
+        marginLeft: '10px',
+    };
+
     return (
         <Navbar color="#00838f" light expand="md" style={{ backgroundColor: "#00838f", display: 'flex', justifyContent: 'space-between', boxShadow: "0px 4px 8px rgba(0,0,0,0.2)" }}>
             <div className="logo">
@@ -27,28 +39,28 @@ function Navigationbar() {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="mx-auto" navbar>
-                    <NavItem>
-                        <Link to="/home" className={`nav-link ${isActive("/home")}`}style={location.pathname === "/home" ? activeStyle : null}><FontAwesomeIcon icon={faHome} className="me-2"/>Home</Link>
+                    <NavItem style={{paddingRight:"10px"}}>
+                        <Link to="/home" className={`nav-link ${isActive("/home")}`}style={location.pathname === "/home" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faHome} className="me-2"/>Home</Link>
                     </NavItem>
-                    <NavItem>
-                        <Link to="/trainings/browse" className={`nav-link ${isActive("/trainings/browse")}`}style={location.pathname === "/trainings/browse" ? activeStyle : null}><FontAwesomeIcon icon={faSearch} className="me-2"/>Trainings</Link>
+                    <NavItem style={{paddingRight:"10px"}}>
+                        <Link to="/trainings/browse" className={`nav-link ${isActive("/trainings/browse")}`}style={location.pathname === "/trainings/browse" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faSearch} className="me-2"/>Trainings</Link>
                     </NavItem>
-                    <NavItem>
-                        <Link to="/trainings/enrolled" className={`nav-link ${isActive("/trainings/enrolled")}`}style={location.pathname === "/trainings/enrolled" ? activeStyle : null}><FontAwesomeIcon icon={faCheckCircle} className="me-2"/>Enrolled</Link>
+                    <NavItem style={{paddingRight:"10px"}}>
+                        <Link to="/trainings/enrolled" className={`nav-link ${isActive("/trainings/enrolled")}`}style={location.pathname === "/trainings/enrolled" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faCheckCircle} className="me-2"/>Enrolled</Link>
                     </NavItem>
-                    <NavItem>
-                        <Link to="/requested" className={`nav-link ${isActive("/requested")}`}style={location.pathname === "/requested" ? activeStyle : null}><FontAwesomeIcon icon={faStar} className="me-2"/>Requested Trainings</Link>
+                    <NavItem style={{paddingRight:"10px"}}>
+                        <Link to="/requested" className={`nav-link ${isActive("/requested")}`}style={location.pathname === "/requested" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faStar} className="me-2"/>Requested Trainings</Link>
                     </NavItem>
                 </Nav>
                 <Nav className="" navbar>
                     <NavItem>
-                        <Link to='/profile' className={`nav-link ${isActive("/profile")} h-100`}>
+                        <Link to='/profile' className={`nav-link ${isActive("/profile")} h-100`} style={linkStyle} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}>
                             <BiUser style={{ fontSize: "20px" }} />
                             <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}> Profile</span>
                         </Link>
                     </NavItem>
                     <NavItem>
-                        <Link to='/' className={`nav-link ${isActive("/")} h-100`}>
+                        <Link to='/' className={`nav-link ${isActive("/")} h-100`} style={linkStyle} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}>
                             <BiLogOut style={{ fontSize: "20px" }} />
                             <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}> Logout</span>
                         </Link>
