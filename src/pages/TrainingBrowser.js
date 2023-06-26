@@ -11,10 +11,10 @@ function TrainingBrowser() {
             <Navigationbar />
             <SearchBar />
             <div className="container mt-4">
-                    <h2 className="text-center mt-4"  style={{color: "#00838f"}}>Browse trainings</h2>
+                    <h2 className="text-center mt-4"  style={{color: "#00474e"}}>Browse trainings</h2>
                     <div className="d-flex flex-column align-items-end mb-5">
-                        <Button style={{color: "#00838f"}}>Create training</Button>
-                        <Button style={{color: "#00838f"}}>Request training</Button>
+                        <Button style={{color: "#00474e"}}>Create training</Button>
+                        <Button style={{color: "#00474e"}}>Request training</Button>
                     </div>
                 <Training />
             </div>

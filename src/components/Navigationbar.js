@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BiUser } from 'react-icons/bi';
+import { BiUser, BiLogOut } from 'react-icons/bi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, NavItem, NavbarToggler, Collapse } from 'reactstrap';
@@ -20,13 +20,13 @@ function Navigationbar() {
     };
 
     return (
-        <Navbar color="#00838f" light expand="md" style={{ backgroundColor: "#00838f" }}>
+        <Navbar color="#00838f" light expand="md" style={{ backgroundColor: "#00838f", display: 'flex', justifyContent: 'space-between' }}>
             <div className="logo">
                 <img src="/navbarlogo72.png" alt="descriptive text" style={{ width: '70%', height: 'auto' }} />
             </div>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-                <Nav className="mr-auto" navbar>
+                <Nav className="mx-auto" navbar>
                     <NavItem>
                         <Link to="/home" className={`nav-link ${isActive("/home")}`}style={location.pathname === "/home" ? activeStyle : null}><FontAwesomeIcon icon={faHome} className="me-2"/>Home</Link>
                     </NavItem>
@@ -40,11 +40,17 @@ function Navigationbar() {
                         <Link to="/requested" className={`nav-link ${isActive("/requested")}`}style={location.pathname === "/requested" ? activeStyle : null}><FontAwesomeIcon icon={faStar} className="me-2"/>Requested Trainings</Link>
                     </NavItem>
                 </Nav>
-                <Nav className="ml-auto" navbar>
+                <Nav className="" navbar>
                     <NavItem>
                         <Link to='/profile' className={`nav-link ${isActive("/profile")} h-100`}>
                             <BiUser style={{ fontSize: "20px" }} />
-                            <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}>Profile</span>
+                            <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}> Profile</span>
+                        </Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to='/' className={`nav-link ${isActive("/")} h-100`}>
+                            <BiLogOut style={{ fontSize: "20px" }} />
+                            <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}> Logout</span>
                         </Link>
                     </NavItem>
                 </Nav>
