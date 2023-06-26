@@ -6,11 +6,11 @@ import { useState, useRef, useContext } from "react";
 import { Container, TextField } from '@mui/material';
 import AuthContext from "../store/auth-context";
 import apiUrl from '../apiConfig';
+import Cookies from 'js-cookie';
 import Footer from "../components/Footer";
 import { useTheme } from '@mui/material/styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import Cookies from 'js-cookie';
 
 /*
 function checkUsername(event) {
@@ -89,8 +89,6 @@ function Login() {
     const enteredUsername = usernameInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    // optional: add validation
-
     setIsLoading(true);
     
     const url = `${apiUrl}/api/auth/signin`;
@@ -127,12 +125,11 @@ function Login() {
       
       console.log(expirationTime);
       authCtx.login(data.accessToken, expirationTime.toISOString());
-      // history.replace('/');
       navigate('/home');
     }).catch(err => {
       setErrorMessage(err.message);
     });
-  };
+};
 
   const theme = useTheme();
 

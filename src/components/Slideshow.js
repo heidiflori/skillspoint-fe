@@ -7,8 +7,29 @@ import Cookies from 'js-cookie';
 function Slideshow() {
     const [courses, setCourses] = useState([]);
 
+    // useEffect(() => {
+    //     async function fetchCourses() {
+    //         try {
+    //             // const response = await fetch(apiUrl + '/courses');
+    //             const response = await fetch(`${apiUrl}/api/trainings/approved-trainings`);
+    //             if (!response.ok) {
+    //                 throw new Error('Failed to fetch courses');
+    //             }
+    //             const data = await response.json();
+    //             setCourses(data[0]);
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     }
+
+    //     fetchCourses();
+    // }, []);
+    
+
+    const [trainings, setTrainings] = useState([]);
+
     useEffect(() => {
-        async function fetchCourses() {
+        const fetchTrainings = async () => {
             try {
                 const token = Cookies.get('token'); // preia tokenul
                 const response = await fetch(apiUrl + '/api/skills/trainings/approved-trainings', {
@@ -25,14 +46,14 @@ function Slideshow() {
             } catch (error) {
                 console.error(error);
             }
-        }
+        };
 
-        fetchCourses();
+        fetchTrainings();
     }, []);
 
     return (
         <Carousel className="container">
-            {courses.map((course, index) => (
+            {trainings.map((course, index) => (
                 <CarouselItem key={index}>
                     <div className="slide d-block justify-content-center align-items-center rounded" style={{ backgroundColor: "#eef5fa", height: '10rem' }}>
                         <h2 className="text-center">{course.title}</h2>

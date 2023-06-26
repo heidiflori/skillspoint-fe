@@ -8,6 +8,8 @@ function Training() {
     const [visibleCourses, setVisibleCourses] = useState(6);
     const [showLessVisible, setShowLessVisible] = useState(false);
 
+    const token = Cookies.get('token');
+
     useEffect(() => {
         async function fetchCourses() {
             try {
@@ -29,7 +31,7 @@ function Training() {
         }
 
         fetchCourses();
-    }, []);
+    }, [token]);
 
     const showMoreCourses = () => {
         setVisibleCourses((prevVisibleCourses) => prevVisibleCourses + 6);
