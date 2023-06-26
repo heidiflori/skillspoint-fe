@@ -136,7 +136,7 @@ function Register() {
     const { value } = event.target;
     setPassword(value);
     setPasswordCriteria({
-      length: value.length >= 3 && value.length <= 20,
+      length: value.length >= 8 && value.length <= 20,
       uppercase: /[A-Z]/.test(value),
       specialCharacter: /[!@#$%^&*()]/.test(value),
       number: /\d/.test(value),
@@ -298,7 +298,7 @@ function Register() {
             }}
           >
               <p style={{fontSize:12, color:"#5E5E5E", marginBottom:"1px"}}>Password must:</p>
-              <Typography color={passwordCriteria.length ? 'success' : 'error'} variant="body2">Have between 3 and 20 characters</Typography>
+              <Typography color={passwordCriteria.length ? 'success' : 'error'} variant="body2">Have between 8 and 20 characters</Typography>
               <Typography color={passwordCriteria.uppercase ? 'success' : 'error'} variant="body2">Contain an uppercase letter</Typography>
               <Typography color={passwordCriteria.specialCharacter ? 'success' : 'error'} variant="body2">Contain a special character "!,@,#,$,%,&,*"</Typography>
               <Typography color={passwordCriteria.number ? 'success' : 'error'} variant="body2">Contain a number</Typography>
