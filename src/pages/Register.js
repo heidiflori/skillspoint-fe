@@ -6,6 +6,7 @@ import apiUrl from '../apiConfig.js';
 import { useTheme } from '@mui/material/styles';
 import Footer from "../components/Footer";
 
+
 //TODO: check first name and last name
 // we need documentation for this
 
@@ -188,7 +189,7 @@ function Register() {
   const theme = useTheme();
 
   return (
-    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateRows: 'auto auto auto', alignItems: 'center', backgroundColor: "#eef5fa" }}>
+    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateRows: 'auto auto auto', alignItems: 'center'}}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', margin: 'auto' }}>
         <img src="/logoapp.png" alt="descriptive text" style={{ width: '20%', height: 'auto' }} />
         <p style={{fontWeight: 'bold', fontSize:40, color:"#00838f", textShadow: '1px 1px rgba(0, 0, 0, 0.3)' }}>SkillMaster</p>
