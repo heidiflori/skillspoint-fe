@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { BiUser, BiLogOut } from 'react-icons/bi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSearch, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSearch, faCheckCircle, faStar, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, NavItem, NavbarToggler, Collapse } from 'reactstrap';
+import Cookies from 'js-cookie';
 
 function Navigationbar() {
     const location = useLocation();
@@ -13,6 +14,14 @@ function Navigationbar() {
 
     const isActive = (path) => {
         return location.pathname === path ? "#00474e" : "text-white";
+    };
+
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        Cookies.remove('token');
+        Cookies.remove('currentuserid');
+        window.location.href = '/';
     };
 
     const activeStyle = {
@@ -49,7 +58,7 @@ function Navigationbar() {
                         <Link to="/trainings/enrolled" className={`nav-link ${isActive("/trainings/enrolled")}`}style={location.pathname === "/trainings/enrolled" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faCheckCircle} className="me-2"/>Enrolled</Link>
                     </NavItem>
                     <NavItem style={{paddingRight:"10px"}}>
-                        <Link to="/requested" className={`nav-link ${isActive("/requested")}`}style={location.pathname === "/requested" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faStar} className="me-2"/>Requested Trainings</Link>
+                        <Link to="/requested" className={`nav-link ${isActive("/requested")}`}style={location.pathname === "/requested" ? activeStyle : null} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}><FontAwesomeIcon icon={faThumbsUp} className="me-2"/>Requested Trainings</Link>
                     </NavItem>
                 </Nav>
                 <Nav className="" navbar>
@@ -60,7 +69,7 @@ function Navigationbar() {
                         </Link>
                     </NavItem>
                     <NavItem>
-                        <Link to='/' className={`nav-link ${isActive("/")} h-100`} style={linkStyle} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}>
+                    <Link onClick={handleLogout} className={`nav-link ${isActive("/")} h-100`} style={linkStyle} onMouseOver={e => Object.assign(e.currentTarget.style, hoverStyle)} onMouseOut={e => e.currentTarget.style.backgroundColor = ''}>
                             <BiLogOut style={{ fontSize: "20px" }} />
                             <span className="me-2" style={{paddingRight: 1, fontSize:"16px"}}> Logout</span>
                         </Link>

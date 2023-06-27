@@ -118,11 +118,11 @@ function Login() {
         });
       }
     }).then(data => {
-      const expiresIn = 500;
+      const expiresIn = 86400;
       const expirationTime = new Date(new Date().getTime() + (expiresIn * 1000));
 
       Cookies.set('token', data.accessToken, { expires: expiresIn / (60 * 60 * 24) }); // Salvăm tokenul în cookies
-      Cookies.set('currentuserid', data.id);
+      Cookies.set('currentuserid', data.id, { expires: expiresIn / (60 * 60 * 24) });
       
       console.log(expirationTime);
       authCtx.login(data.accessToken, expirationTime.toISOString());
