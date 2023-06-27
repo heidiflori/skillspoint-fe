@@ -24,6 +24,17 @@ body{
     justify-content: center;
 }
 
+.button-like {
+    background-color: transparent;
+    color: #00838f;
+    padding-right: 4px;
+}
+
+.button-like:hover {
+    background-color: #d2d2d2;
+    transition: background-color 0.3s ease-in-out;
+}
+
 .card{
     border:none;
     transition: background-color 0.5s ease-in-out;

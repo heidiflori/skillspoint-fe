@@ -5,6 +5,7 @@ import SearchBar from '../components/SearchBar';
 import { Button } from '@mui/material';
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import Requests from '../components/Requests'
 
 function Requested() {
     return (
@@ -17,7 +18,7 @@ function Requested() {
                         <Button style={{color: "#00838f"}}>Request training</Button>
                     </Link>
                 </div>
-                {/* <Training /> */}
+                <Requests />
             </div>
             <Footer />
         </>
