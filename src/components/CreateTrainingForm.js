@@ -7,6 +7,7 @@ import { TextField } from '@mui/material';
 const CreateTrainingForm = () => {
 
     const token = Cookies.get('token');
+    const currentUserId = Cookies.get('currentuserid');
 
     const [input, setInput] = useState({
         title: "",

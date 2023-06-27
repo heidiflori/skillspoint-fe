@@ -7,11 +7,14 @@ import Cookies from 'js-cookie';
 const TrainingRequestForm = () => {
 
     const token = Cookies.get('token');
-    // const likesCounter = 0;
+    const currentUserId = Cookies.get('currentuserid');
+    const likesCounter = 0;
 
     const [input, setInput] = useState({
+        user: { id: currentUserId },
         title: "",
         description: "",
+        likesCounter: likesCounter
     });
 
     const handleChangeInput = (event) => {

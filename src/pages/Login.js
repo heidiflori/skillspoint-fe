@@ -122,6 +122,7 @@ function Login() {
       const expirationTime = new Date(new Date().getTime() + (expiresIn * 1000));
 
       Cookies.set('token', data.accessToken, { expires: expiresIn / (60 * 60 * 24) }); // Salvăm tokenul în cookies
+      Cookies.set('currentuserid', data.id);
       
       console.log(expirationTime);
       authCtx.login(data.accessToken, expirationTime.toISOString());
