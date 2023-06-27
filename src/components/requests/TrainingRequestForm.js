@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import apiUrl from '../../apiConfig.js';
 import '../../styles/styles.css';
 import Cookies from 'js-cookie';
-
+import { Link } from "react-router-dom"
 
 const TrainingRequestForm = () => {
 
@@ -55,7 +55,9 @@ const TrainingRequestForm = () => {
                     <textarea className='form-control' required type="text" name='description' value={input.description} onChange={handleChangeInput} />
                 </div>
                 <div className='buttons-section'>
-                    <button className='btn btn-primary' type='submit'>Submit</button>
+                    <button className='btn btn-primary' type='submit'>
+                        <Link to="/requested" style={{color:'white', textDecoration:'none'}}>Submit</Link>
+                    </button>
                 </div>
                 
             </form>

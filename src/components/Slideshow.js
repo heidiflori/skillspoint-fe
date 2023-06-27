@@ -42,7 +42,7 @@ function Slideshow() {
                 }
                 const data = await response.json();
                 console.log(data);
-                setCourses(data);
+                setTrainings(data);
             } catch (error) {
                 console.error(error);
             }

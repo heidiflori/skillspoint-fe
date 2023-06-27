@@ -3,6 +3,8 @@ import apiUrl from '../apiConfig.js';
 import Cookies from 'js-cookie';
 import Footer from "../components/Footer";
 import { TextField } from '@mui/material';
+import { Link } from "react-router-dom"
+
 
 const CreateTrainingForm = () => {
 
@@ -94,7 +96,9 @@ const CreateTrainingForm = () => {
                         </select>
                     </div>
                     <div className='buttons-section'>
-                        <button className="btn btn-primary" type='submit'>Submit</button>
+                        <button className="btn btn-primary" type='submit' >
+                            <Link to="/trainings/browse" style={{color:'white', textDecoration:'none'}}>Submit</Link>
+                        </button>
                     </div>
                 </form>
             </div>

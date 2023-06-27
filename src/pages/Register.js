@@ -178,7 +178,7 @@ function Register() {
       } catch (error) {
         console.log(error);
       }
-      let path = '/home';
+      let path = '/';
       navigate(path);
     } else {
       console.log('invalid register session!')

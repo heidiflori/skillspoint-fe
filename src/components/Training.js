@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import apiUrl from '../apiConfig.js';
 import Cookies from 'js-cookie';
+import TrainingDetailsModal from './TrainingDetailsModal.js';
 
 
 function Training() {
     const [courses, setCourses] = useState([]);
     const [visibleCourses, setVisibleCourses] = useState(6);
     const [showLessVisible, setShowLessVisible] = useState(false);
+
+    const [showModal, setShowModal] = useState(false);
+    const [selectTraining, setSelectedTraining] = useState(null);
+    
 
     const token = Cookies.get('token');
 
@@ -43,11 +48,21 @@ function Training() {
         setShowLessVisible(false);
     };
 
+    const handleCardClick = (course) => {
+        setSelectedTraining(course)
+        setShowModal(true)
+    }
+
+    const handleClose = () =>{
+        setShowModal(false)
+        setSelectedTraining(null)
+    }
+
     return (
         <div className="container">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 {courses.slice(0, visibleCourses).map((course, index) => (
-                    <div key={index} className="col mb-4">
+                    <div key={index} className="col mb-4" onClick ={() => handleCardClick(course)}>
                         <div className="card h-100 d-flex flex-column">
                             <div className="card-body">
                                 <h3 className="card-title">{course.title}</h3>
@@ -61,18 +76,19 @@ function Training() {
             </div>
             {visibleCourses < courses.length && !showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
-                    <button className="btn btn-secondary" onClick={showMoreCourses}>
+                    <button className="btn btn-primary" onClick={showMoreCourses}>
                         Show More
                     </button>
                 </div>
             ) : null}
             {showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
-                    <button className="btn btn-secondary" onClick={showLessCourses}>
+                    <button className="btn btn-primary" onClick={showLessCourses}>
                         Show Less
                     </button>
                 </div>
             ) : null}
+            <TrainingDetailsModal show={showModal} onClose = {handleClose} selectedTraining={selectTraining} />
         </div>
     );
 }
