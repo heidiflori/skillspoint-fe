@@ -5,8 +5,8 @@ import axios from 'axios';
 import apiUrl from '../apiConfig.js';
 import { useTheme } from '@mui/material/styles';
 import Footer from "../components/Footer";
-
-
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //TODO: check first name and last name
 // we need documentation for this
 
@@ -315,7 +315,7 @@ function Register() {
             variant="contained"
             onClick={handleRegisterClick}
           >
-            Register
+            <FontAwesomeIcon icon={faUserPlus} className="me-2"/>Register
           </Button>
         </Box>
       </Container>

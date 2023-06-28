@@ -11,8 +11,8 @@ import Footer from "../components/Footer";
 import { useTheme } from '@mui/material/styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-
-
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 /*
 function checkUsername(event) {
   event.preventDefault();
@@ -188,10 +188,10 @@ function Login() {
               variant="contained"
               onClick={handleLoginClick}
             >
-              Log in
+              <FontAwesomeIcon icon={faSignInAlt} className="me-2"/>Log in
             </Button>
             <Button sx={{ padding: 1, margin: 1, fontWeight: 'bold',backgroundColor: '#00838f', color: '#fff','&:hover': {backgroundColor: '#004d40'}}} variant="contained" onClick={handleRegisterClick}>
-              Register
+              <FontAwesomeIcon icon={faUserPlus} className="me-2"/>Register
             </Button>
           </Box>
         </Container>

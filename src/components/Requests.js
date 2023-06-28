@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import apiUrl from '../apiConfig.js';
 import Cookies from 'js-cookie';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from 'reactstrap';
-
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -82,10 +82,10 @@ function Requests() {
                         <div className="card h-100 d-flex flex-column">
                             <div className="card-body">
                                 <h3 className="card-title">{training.title}</h3>
-                                <p className="card-text">Description: {training.description}</p>
-                                <p className="card-text">Likes: {training.likesCounter}</p>
+                                <hr></hr>
+                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faQuoteLeft} className="me-2"/>Description:</span> {training.description}</p>
                                 <button className='btn btn-primary button-like' type="submit" onClick={(event) => handleLike(event, training.id)}>
-                                    <FontAwesomeIcon icon={faThumbsUp} className="me-2"/>
+                                    <FontAwesomeIcon icon={faThumbsUp} className="me-2" style={{fontSize:"22px"}}/><span className='modal-span'>{training.likesCounter}</span>
                                 </button>
                             </div>
                         </div>
@@ -95,14 +95,14 @@ function Requests() {
             {visibleTrainings < trainings.length && !showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-secondary" onClick={showMoreTrainings}>
-                        Show More
+                        <FontAwesomeIcon icon={faChevronDown} className="me-2"/>Show More
                     </button>
                 </div>
             ) : null}
             {showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-secondary" onClick={showLessTrainings}>
-                        Show Less
+                        <FontAwesomeIcon icon={faChevronUp} className="me-2" style={{display: 'flex', justifyContent: 'flex-end'}}/>Show Less
                     </button>
                 </div>
             ) : null}

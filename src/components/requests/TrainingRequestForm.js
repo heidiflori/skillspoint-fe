@@ -3,6 +3,8 @@ import apiUrl from '../../apiConfig.js';
 import '../../styles/styles.css';
 import Cookies from 'js-cookie';
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const TrainingRequestForm = () => {
 
@@ -56,7 +58,7 @@ const TrainingRequestForm = () => {
                 </div>
                 <div className='buttons-section'>
                     <button className='btn btn-primary' type='submit'>
-                        <Link to="/requested" style={{color:'white', textDecoration:'none'}}>Submit</Link>
+                        <FontAwesomeIcon icon={faPaperPlane} className="me-2"/>Submit
                     </button>
                 </div>
                 

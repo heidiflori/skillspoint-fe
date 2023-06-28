@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import apiUrl from '../apiConfig.js';
 import Cookies from 'js-cookie';
 import TrainingDetailsModal from './TrainingDetailsModal.js';
-
-
+import { faClock, faUserTie, faChalkboardTeacher, faStar, faTags, faList, faStream } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 function Training() {
     const [courses, setCourses] = useState([]);
     const [visibleCourses, setVisibleCourses] = useState(6);
@@ -65,10 +66,11 @@ function Training() {
                     <div key={index} className="col mb-4" onClick ={() => handleCardClick(course)}>
                         <div className="card h-100 d-flex flex-column">
                             <div className="card-body">
-                                <h3 className="card-title">{course.title}</h3>
-                                <p className="card-text">Trainer: {course.trainer}</p>
-                                <p className="card-text">Type: {course.type}</p>
-                                <p className="card-text">Duration: {course.duration}</p>
+                                <h5 className="card-title" style={{fontWeight:"bold"}}>{course.title}</h5>
+                                <hr style={{color:"#BDBDBD"}}></hr>
+                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faUserTie} className="me-2"/>Trainer:</span> {course.trainer}</p>
+                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faStream} className="me-2"/>Type:</span> {course.type}</p>
+                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faClock} className="me-2"/>Duration:</span> {course.duration}</p>
                             </div>
                         </div>
                     </div>
@@ -77,14 +79,14 @@ function Training() {
             {visibleCourses < courses.length && !showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showMoreCourses}>
-                        Show More
+                       <FontAwesomeIcon icon={faChevronDown} className="me-2"/>Show More
                     </button>
                 </div>
             ) : null}
             {showLessVisible ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showLessCourses}>
-                        Show Less
+                        <FontAwesomeIcon icon={faChevronUp} className="me-2"/>Show Less
                     </button>
                 </div>
             ) : null}

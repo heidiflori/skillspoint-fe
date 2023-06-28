@@ -55,7 +55,7 @@ function Slideshow() {
         <Carousel className="container">
             {trainings.map((course, index) => (
                 <CarouselItem key={index}>
-                    <div className="slide d-block justify-content-center align-items-center rounded" style={{ backgroundColor: "#eef5fa", height: '10rem' }}>
+                    <div className="slide d-block justify-content-center align-items-center rounded" style={{ backgroundColor: "#41cca3", height: '10rem' }}>
                         <h2 className="text-center">{course.title}</h2>
                         <p className="text-center">Trainer: {course.trainer}</p>
                     </div>

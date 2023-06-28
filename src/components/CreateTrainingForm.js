@@ -4,6 +4,8 @@ import Cookies from 'js-cookie';
 import Footer from "../components/Footer";
 import { TextField } from '@mui/material';
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 
 const CreateTrainingForm = () => {
@@ -97,7 +99,7 @@ const CreateTrainingForm = () => {
                     </div>
                     <div className='buttons-section'>
                         <button className="btn btn-primary" type='submit' >
-                            <Link to="/trainings/browse" style={{color:'white', textDecoration:'none'}}>Submit</Link>
+                            <FontAwesomeIcon icon={faPaperPlane} className="me-2"/> Submit
                         </button>
                     </div>
                 </form>
