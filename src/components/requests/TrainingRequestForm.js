@@ -53,7 +53,7 @@ const TrainingRequestForm = () => {
                     <input className='form-control' required type="text" name='title' value={input.title} onChange={handleChangeInput} />
                 </div>
                 <div className="form-group">
-                    <label>Description</label>
+                    <label>Details</label>
                     <textarea className='form-control' required type="text" name='description' value={input.description} onChange={handleChangeInput} />
                 </div>
                 <div className='buttons-section'>

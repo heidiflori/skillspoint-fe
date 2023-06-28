@@ -18,7 +18,7 @@ function Home() {
                     <Training />
                 </div>
                 <div>
-                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Enrolled trainings</h3>
+                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}></h3>
                     {/* <Training /> */}
                 </div>
             </div>         
