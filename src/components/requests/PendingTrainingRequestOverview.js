@@ -16,6 +16,7 @@ const PendingTrainingRequestOverview = () => {
                     method: "GET",
                     headers: {
                         "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Method": "*",
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${token}`
                     }
