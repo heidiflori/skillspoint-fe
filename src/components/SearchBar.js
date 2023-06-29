@@ -1,18 +1,12 @@
 import React from "react";
-
+import { BiSearch } from "react-icons/bi";
+import { Container } from "react-bootstrap";
 
 function SearchBar() {
     return (
-        <div className="d-flex justify-content-center">
-            <div className="input-group w-25 m-3">
-                <input type="text" className="form-control" placeholder="Search..." />
-                <div className="input-group-append">
-                    <span className="input-group-text bg-white d-flex align-items-center" style={{ height: "5vh" }}>
-                        <i className="fas fa-search"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
+        <Container className="d-flex justify-content-center w-25 mt-3 ">
+                <input type="text" className = "form-control"placeholder="Search..." />
+        </Container>
     )
 }
 
