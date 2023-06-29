@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Navigationbar from '../components/Navigationbar';
-import Training from '../components/Training';
 import Footer from "../components/Footer";
 import Cookies from 'js-cookie';
 import apiUrl from '../apiConfig';
