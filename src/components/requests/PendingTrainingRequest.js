@@ -6,39 +6,45 @@ import Cookies from 'js-cookie';
 const PendingTrainingRequest = ({ trainingRequest }) => {
 
     const token = Cookies.get('token');
+    
 
     const handleSubmitApprove = async (event) => {
         event.preventDefault();
 
-        // const path = `http://localhost:3001/requests/${trainingRequest.id}`;
-        const path = `${apiUrl}/api/skills/requests/${trainingRequest.id}`;
-        // const path = `${apiUrl}/requests/pending-trainings`;
+        const path = `${apiUrl}/api/skills/training-requests/approve/${trainingRequest.id}`;
 
         const body = {
-            ...trainingRequest,
-            adminApproval: "approved"
+            ...trainingRequest
         }
+
         const response = await fetch(path, {
             method: "PUT",
             headers: {
                 "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "*",
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
-            body: JSON.stringify(body),
+            // body: JSON.stringify(body),
         })
     };
 
     const handleSubmitDecline = async (event) => {
         event.preventDefault();
 
-        const path = "http://localhost:3001/declined";
+        const path = `${apiUrl}/api/skills/training-requests/delete/${trainingRequest.id}`;
+
+        const body = {
+            ...trainingRequest
+        }
 
         const response = await fetch(path, {
             method: "DELETE",
             headers: {
                 "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json"
+                "Access-Control-Allow-Methods": "*",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
             }
         })
     };
@@ -46,7 +52,7 @@ const PendingTrainingRequest = ({ trainingRequest }) => {
     return (
         <div className='requested-training-card'>
             <h3 className="card-title">{trainingRequest.title} </h3>
-            <p className="card-text">from {trainingRequest.user}</p>
+            <p className="card-text">from {trainingRequest.username}</p>
             <p className="card-text">{trainingRequest.description}</p>
 
             <div className="buttons-section">
@@ -57,4 +63,4 @@ const PendingTrainingRequest = ({ trainingRequest }) => {
   )
 }
 
-export default PendingTrainingRequest
+export default PendingTrainingRequest;

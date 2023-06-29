@@ -34,7 +34,7 @@ const PendingTrainingRequestOverview = () => {
         }
 
         fetchRequestedTrainings();
-    }, []);
+    }, [token]);
 
     return (
         <>

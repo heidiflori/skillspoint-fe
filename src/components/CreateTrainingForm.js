@@ -20,8 +20,8 @@ const CreateTrainingForm = () => {
         startingDate: "",
         duration: "",
         maximumSlots: "",
-        type: ""
-
+        type: "",
+        status: "upcoming"
     });
 
     const handleChangeInput = (event) => {
@@ -35,7 +35,8 @@ const CreateTrainingForm = () => {
         event.preventDefault();
 
         const path = `${apiUrl}/api/skills/trainings/add`;
-        const body = { ...input };
+        const body = { ...input,
+        };
 
         const response = await fetch(path, {
             method: "POST",
