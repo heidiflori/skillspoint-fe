@@ -39,16 +39,9 @@ function Review({selectedTraining, reviewUpdateTrigger}) {
     return (
         <div>
             {reviews.map((review, index) => (
-                <Container>
-                    <div>
-                        <p><FontAwesomeIcon icon={faUser} /> {review.user.username}</p>
-                        <p><Rating
-                            value={review.rating}
-                            readOnly
-                            size="small"
-                        /></p>
+                <Container className="rounded mt-1" style={{backgroundColor:"#F8F8F8" }}>
+                        <p style={{fontSize:"16px"}}><FontAwesomeIcon icon={faUser} /> {review.user.username} <Rating value={review.rating} readOnly size="small"/></p>
                         <p>{review.comment}</p>
-                    </div>
                 </Container>
             ))}
         </div>

@@ -6,7 +6,7 @@ import apiUrl from '../apiConfig';
 import { Link } from "react-router-dom"
 import { faClock, faCheckSquare, faUserTie, faCalendar, faCircle, faQuoteLeft, faInfo, faStream } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCheck, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faUserCheck, faShare, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Rating, TextField, Box } from "@mui/material";
 import Review from "./Review";
 
@@ -128,7 +128,7 @@ function TrainingDetailsModal ({show, onClose, selectedTraining}){
                                     <Button type="submit" onClick={handleSubmit}><FontAwesomeIcon icon={faShare} /> POST</Button>
                                 </Container>
                         </Container>
-                        <h5 className="mt-3">User reviews</h5>
+                        <h4 className="mt-1">User reviews <FontAwesomeIcon icon={faComment}/></h4>
                         <Review selectedTraining={selectedTraining} reviewUpdateTrigger={reviewUpdateTrigger}/>
 
                     </div>)
