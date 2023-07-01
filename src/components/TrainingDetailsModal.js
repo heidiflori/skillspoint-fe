@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCheck, faShare, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Rating, TextField, Box, Snackbar } from "@mui/material";
 import Review from "./Review";
+import FileDownloadComponent from "./FileDownloadComponent";
+import FileUploadComponent from "./FileUploadComponent";
 
 function TrainingDetailsModal({ show, onClose, selectedTraining }) {
 
@@ -17,6 +19,7 @@ function TrainingDetailsModal({ show, onClose, selectedTraining }) {
     const trainingId = selectedTraining?.id;
     const url = `${apiUrl}/api/skills/enrolled-users/enrol`;
     const [showConfirmation, setShowConfirmation] = useState(false);
+    
 
     const statusColor = {
         completed: '#dc3545',
@@ -134,6 +137,18 @@ function TrainingDetailsModal({ show, onClose, selectedTraining }) {
                         </Container>
                         <h4 className="mt-1">User reviews <FontAwesomeIcon icon={faComment} /></h4>
                         <Review selectedTraining={selectedTraining} reviewUpdateTrigger={reviewUpdateTrigger} />
+
+                        <hr></hr>
+
+                        <h4 className="mt-4 mb-3">Upload materials for this training</h4>
+                        <FileUploadComponent trainingId={selectedTraining.id}/>
+
+                        <h4 className="mt-4 mb-3">Download training materials</h4>
+                        <FileDownloadComponent trainingId={selectedTraining.id} />
+
+
+
+
                     </div>)
                 }
             </Modal.Body>
