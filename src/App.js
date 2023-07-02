@@ -12,7 +12,7 @@ import Requested from './pages/Requested';
 import RequestTraining from './pages/RequestTraining';
 import CreateTraining from './pages/CreateTraining';
 import PendingTrainingRequestPage from './pages/PendingTrainingRequestPage';
-
+import AboutUs from './pages/AboutUs';
 function App() {
   return (
       <Routes>
@@ -28,7 +28,7 @@ function App() {
         <Route path="/request-training" exact element={<RequestTraining />} />        
         <Route path="/create-training" exact element={<CreateTraining />} />      
         <Route path="/pending-requests" exact element={<PendingTrainingRequestPage />} />    
-
+        <Route path="/about-us" exact element={<AboutUs />} /> 
         {/* <Footer /> */}
       </Routes>
   );

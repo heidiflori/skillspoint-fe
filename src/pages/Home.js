@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <Navigationbar />
-            <div className="container">
+            <div className="container" style={{ paddingTop: '70px' }}>
                 <div className="availabileTrainings">
                     <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Most popular trainings</h3>
                     <Slideshow />
@@ -21,7 +21,7 @@ function Home() {
                     <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}></h3>
                     {/* <Training /> */}
                 </div>
-            </div>         
+            </div>           
             <Footer />
         </>
     )

@@ -12,7 +12,7 @@ function Requested() {
     return (
         <>
             <Navigationbar />
-            <div className='container mt-5'>
+            <div className='container' style={{ paddingTop: '70px' }}>
                 <h2 className="text-center mt-4" style={{ color: "#00474e" }}>Requested trainings</h2>
                 <div className="d-flex flex-column align-items-end mb-5">
                     <Link to="/request-training">

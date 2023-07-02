@@ -1,11 +1,12 @@
 import React from "react";
 import Navigationbar from "../components/Navigationbar";
 import Footer from "../components/Footer";
+
 function Profile() {
     return (
         <>
             <Navigationbar />
-            <div className="container mt-5">
+            <div className='container' style={{ paddingTop: '100px' }}>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="card border shadow-sm h-100">

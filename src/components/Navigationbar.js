@@ -41,7 +41,7 @@ function Navigationbar() {
     };
 
     return (
-        <Navbar color="#00838f" light expand="md" style={{ backgroundColor: "#00838f", display: 'flex', justifyContent: 'space-between', boxShadow: "0px 4px 8px rgba(0,0,0,0.2)" }}>
+        <Navbar color="#00838f" light expand="md" style={{ backgroundColor: "#00838f", display: 'flex', justifyContent: 'space-between', boxShadow: "0px 4px 8px rgba(0,0,0,0.2)", position: "fixed", width: "100%", zIndex: 100 }}>
             <div className="logo">
                 <img src="/navbarlogo72.png" alt="descriptive text" style={{ width: '70%', height: 'auto' }} />
             </div>

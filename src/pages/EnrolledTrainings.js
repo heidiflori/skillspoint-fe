@@ -41,7 +41,7 @@ function EnrolledTrainings() {
     return (
         <>
             <Navigationbar />
-            <div className='container mt-5'>
+            <div className='container' style={{ paddingTop: '70px' }}>
                 <h2 className="text-center mt-4 mb-5" style={{ color: "#00474e" }}>Enrolled trainings</h2>
                 {/* <Training /> */}
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">

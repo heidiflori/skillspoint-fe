@@ -13,9 +13,9 @@ function TrainingBrowser() {
     return (
         <>
             <Navigationbar />
+            <div className='container' style={{ paddingTop: '70px' }}>
+            <h2 className="text-center mt-4"  style={{color: "#00474e"}}>Browse trainings</h2>
             <SearchBar />
-            <div className="container mt-4">
-                    <h2 className="text-center mt-4"  style={{color: "#00474e"}}>Browse trainings</h2>
                     <div className="d-flex flex-column align-items-end mb-5">
                         <Link to="/create-training">
                             <Button style={{color: "#00838f"}}><FontAwesomeIcon icon={faPlusSquare} className="me-2"/>Create training</Button>
