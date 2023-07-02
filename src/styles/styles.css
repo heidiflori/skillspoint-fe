@@ -95,3 +95,10 @@ form {
 .modal-span{
     font-weight: bold;
 }
+
+.card-custom {
+    flex: 0 0 300px; /* Width of the cards */
+    max-width: 300px; /* Maximum width of the cards */
+  }
+
+

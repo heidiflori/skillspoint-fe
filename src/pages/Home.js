@@ -8,13 +8,13 @@ function Home() {
     return (
         <>
             <Navigationbar />
-            <div className="container" style={{ paddingTop: '70px' }}>
+            <div className="container" style={{ paddingTop: '50px' }}>
                 <div className="availabileTrainings">
-                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Most popular trainings</h3>
+                    <h2 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Most popular trainings</h2>
                     <Slideshow />
                 </div>
                 <div>
-                    <h3 style={{color: '#00474e', textAlign: 'center', marginBottom: 30, marginTop:50}}>Available trainings</h3>
+                    <h2 style={{color: '#00474e', textAlign: 'center', marginBottom: 30, marginTop:50}}>Available trainings</h2>
                     <Training />
                 </div>
                 <div>

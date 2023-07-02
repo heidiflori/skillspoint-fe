@@ -70,7 +70,7 @@ function Training() {
                                 <hr style={{color:"#BDBDBD"}}></hr>
                                 <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faUserTie} className="me-2"/>Trainer:</span> {course.trainer}</p>
                                 <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faStream} className="me-2"/>Type:</span> {course.type}</p>
-                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faClock} className="me-2"/>Duration:</span> {course.duration}</p>
+                                <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faClock} className="me-2"/>Duration:</span> {course.duration} hours</p>
                             </div>
                         </div>
                     </div>
