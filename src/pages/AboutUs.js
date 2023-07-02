@@ -2,6 +2,9 @@ import React from "react";
 import Navigationbar from "../components/Navigationbar";
 import Footer from "../components/Footer";
 import { useEffect, useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faBullseye } from '@fortawesome/free-solid-svg-icons';
+
 
 function AboutUs(){
 
@@ -21,15 +24,15 @@ function AboutUs(){
                 </div>
 
                 <div className="section">
-                    <p style={{fontSize:19, textAlign:"justify"}}>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to SkillMaster, the team 7 of DB Cloud School 2023. We are a dedicated group of passionate individuals committed to providing high-quality learning experiences. With a diverse range of skills and expertise, we strive to empower learners and enhance their skills in the ever-evolving world of technology. Join us on this exciting journey of growth and knowledge!</p>
+                    <p style={{fontSize:20, textAlign:"justify"}}>Welcome to SkillMaster, the team 7 of DB Cloud School 2023. We are a dedicated group of passionate individuals committed to providing high-quality learning experiences. With a diverse range of skills and expertise, we strive to empower learners and enhance their skills in the ever-evolving world of technology. Join us on this exciting journey of growth and knowledge!</p>
                 </div>
                 <div className="section">
-                    <h3>Our Mission</h3>
-                    <p style={{fontSize:19, textAlign:"justify"}}>&nbsp;&nbsp;&nbsp;&nbsp;At SkillsPoint, our mission is to provide a dynamic learning platform where users can both teach and participate in courses taught by other trainers. We believe in fostering a community that empowers individuals to share their knowledge and expertise, while also offering opportunities for continuous learning and personal growth. By connecting trainers and learners from diverse backgrounds, we aim to create an inclusive environment that promotes collaboration, skill development, and the exchange of ideas. Together, we strive to unlock the full potential of every individual, making education accessible and engaging for all.</p>
+                    <h3>Our Mission <FontAwesomeIcon icon={faBullseye} className="me-2"/> </h3>
+                    <p style={{fontSize:20, textAlign:"justify"}}>At SkillsPoint, our mission is to provide a dynamic learning platform where users can both teach and participate in courses taught by other trainers. We believe in fostering a community that empowers individuals to share their knowledge and expertise, while also offering opportunities for continuous learning and personal growth. By connecting trainers and learners from diverse backgrounds, we aim to create an inclusive environment that promotes collaboration, skill development, and the exchange of ideas. Together, we strive to unlock the full potential of every individual, making education accessible and engaging for all.</p>
                 </div>
                 <div className="section">
-                    <h3>Our Team</h3>
-                    <p style={{fontSize:19, textAlign:"justify"}}>&nbsp;&nbsp;&nbsp;&nbsp;Meet the talented individuals behind SkillsPoint. With a combined expertise in software development, quality assurance, business analysis, and mentoring, our team of 11 individuals is dedicated to delivering the best learning experience to our users.</p>
+                    <h3>Our Team <FontAwesomeIcon icon={faUsers} className="me-2"/> </h3>
+                    <p style={{fontSize:20, textAlign:"justify"}}>Meet the talented individuals behind SkillsPoint. With a combined expertise in software development, quality assurance, business analysis, and mentoring, our team of 11 individuals is dedicated to delivering the best learning experience to our users.</p>
                 </div>
                 <div className="container mt-5">
                     <div className="d-flex flex-wrap justify-content-between">

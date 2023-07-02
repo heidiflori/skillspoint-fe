@@ -25,7 +25,7 @@ function Footer() {
       </div>
       
       <div className="container d-flex align-items-center justify-content-center w-50 mt-4">
-        <img src="https://storage.googleapis.com/skillspoint-images/app-logo-more.png" alt="Logo More" />
+        <img src="https://storage.googleapis.com/skillspoint-images/app-logo-more.png" alt="Logo More"  />
       </div>
     </footer>
   );

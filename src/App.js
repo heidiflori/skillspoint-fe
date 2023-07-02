@@ -13,7 +13,7 @@ import RequestTraining from './pages/RequestTraining';
 import CreateTraining from './pages/CreateTraining';
 import PendingTrainingRequestPage from './pages/PendingTrainingRequestPage';
 import AboutUs from './pages/AboutUs';
-import Help from './pages/Help';
+import HelpPage from './pages/HelpPage';
 function App() {
   return (
       <Routes>
@@ -30,7 +30,7 @@ function App() {
         <Route path="/create-training" exact element={<CreateTraining />} />      
         <Route path="/pending-requests" exact element={<PendingTrainingRequestPage />} />    
         <Route path="/about-us" exact element={<AboutUs />} /> 
-        <Route path="/help" exact element={<Help />} /> 
+        <Route path="/help" exact element={<HelpPage />} />
         {/* <Footer /> */}
       </Routes>
   );
