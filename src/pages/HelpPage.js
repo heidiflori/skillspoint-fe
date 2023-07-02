@@ -32,73 +32,73 @@ function HelpPage() {
                     <h3 className="mb-3 mt-5">FAQ <FontAwesomeIcon icon={faQuestionCircle} className="me-2"/></h3>
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I view more details for a training?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 1:</span> How do I view more details for a training?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>Click on the desired training to view more details such as description, trainer, duration, start date, available spots, etc.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography ><span className="modal-span">Answer:</span> Click on the desired training to view more details such as description, trainer, duration, start date, available spots, etc.</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I enroll in a training?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 2:</span> How do I enrol in a training?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>Click on the desired training and from the newly opened window, click on "Enrol".</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> Click on the desired training and from the newly opened window, click on "Enrol".</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How can I become a trainer?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 3:</span> How can I become a trainer?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>To become a trainer, select the "Trainings" menu from the top navigation bar and choose "Create Training" on the right side. Fill out the opened form.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> To become a trainer, select the "Trainings" menu from the top navigation bar and choose "Create Training" on the right side. Fill out the opened form.</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I add a training?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 4:</span> How do I add a training?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>To add a training, select the "Trainings" menu from the top navigation bar, then click on "Create Training" on the right side. Fill out the opened form, and your training will be submitted to an admin for verification and acceptance.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> To add a training, select the "Trainings" menu from the top navigation bar, then click on "Create Training" on the right side. Fill out the opened form, and your training will be submitted to an admin for verification and acceptance.</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I add course materials?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 5:</span> How do I add course materials?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>If you already have a training, to add course materials, click on the training, scroll down to the bottom of the opened page, and drag and drop the files you want to upload into the corresponding box.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> If you already have a training, to add course materials, click on the training, scroll down to the bottom of the opened page, and drag and drop the files you want to upload into the corresponding box.</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I download the course materials for a training?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 6:</span> How do I download the course materials for a training?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>To download course materials for a training, click on the desired training, scroll down to the bottom of the opened window, and click on the corresponding "Download" button for the course material you want to download.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> To download course materials for a training, click on the desired training, scroll down to the bottom of the opened window, and click on the corresponding "Download" button for the course material you want to download.</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How do I leave a review for a course?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 7:</span> How do I leave a review for a course?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>To leave a review for a training, click on the desired training, scroll down on the opened page, fill out the text box for comments, select a rating using the stars below the box, and click on "Post".</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> To leave a review for a training, click on the desired training, scroll down on the opened page, fill out the text box for comments, select a rating using the stars below the box, and click on "Post".</Typography>
                         </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontSize:"18px"}}>How can I request a training?</Typography>
+                            <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 8:</span> How can I request a training?</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>To request a training, access "Requested Trainings" from the top navigation bar and click on "Request Training" on the right side. Fill out the opened form and click on "Submit". Your request will be sent to an admin and displayed on the page.</Typography>
+                        <AccordionDetails style={{backgroundColor:"#F1F1F1"}}>
+                            <Typography><span className="modal-span">Answer:</span> To request a training, access "Requested Trainings" from the top navigation bar and click on "Request Training" on the right side. Fill out the opened form and click on "Submit". Your request will be sent to an admin and displayed on the page.</Typography>
                         </AccordionDetails>
                     </Accordion>
                     {/* Adaugă mai multe întrebări și răspunsuri aici, folosind aceeași structură de Accordion și AccordionSummary */}
