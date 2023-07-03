@@ -11,7 +11,7 @@ function EnrolledTrainings() {
 
     const [trainings, setTrainings] = useState([]);
 
-    const token = Cookies.get('token')
+    const token = Cookies.get('token');
     const userId = Cookies?.get("currentuserid");
 
     console.log(userId);

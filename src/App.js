@@ -15,6 +15,7 @@ import PendingTrainingRequestPage from './pages/PendingTrainingRequestPage';
 import AboutUs from './pages/AboutUs';
 import HelpPage from './pages/HelpPage';
 import TrainingCalendar from './components/TrainingCalendar';
+import Attendance from './pages/Attendance';
 function App() {
   return (
       <Routes>
@@ -33,6 +34,7 @@ function App() {
         <Route path="/about-us" exact element={<AboutUs />} /> 
         <Route path="/help" exact element={<HelpPage />} />
         <Route path='/calendar' exact element={<TrainingCalendar />} />
+        <Route path='/attendance' exact element={<Attendance />} />
         {/* <Footer /> */}
       </Routes>
   );
