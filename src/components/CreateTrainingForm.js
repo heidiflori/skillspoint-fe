@@ -68,7 +68,7 @@ const CreateTrainingForm = () => {
                     </div>
                     <div className="form-group">
                         <label for="date-picker">Starting date</label>
-                        <input className='form-control' name='startingDate' type='date' value={input.staringDate} onChange={handleChangeInput}/>                    
+                        <input className='form-control' name='startingDate' type='date' value={input.startingDate} onChange={handleChangeInput}/>                    
                     </div>
                     
                     {/* <TextField type='date' name='startingDate' label="startingDate" value={input.staringDate}/> */}

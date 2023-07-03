@@ -13,6 +13,10 @@ body{
     color: #00838f;
 }
 
+.btn-primary.clicked {
+    background-color: #8f2100;
+}
+
 .btn-secondary {
     background-color: #8f2100;
     margin-top: 10px;
