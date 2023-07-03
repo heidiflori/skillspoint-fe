@@ -1,22 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 import Cookies from 'js-cookie';
 import apiUrl from '../apiConfig';
 import { Card, CardContent, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import '../styles/calendar.css'
 
 const useStyles = makeStyles({
     card: {
-        marginBottom: '1rem',
-        margin: '1rem'
+      marginBottom: '1rem',
+      margin: '1rem',
+      backgroundColor: '#f5f5f5', 
+      border: '1px solid #ccc', 
+      borderRadius: '8px', 
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
+      transition: 'transform 0.2s ease-in-out', 
+      '&:hover': {
+        transform: 'scale(1.05)', 
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
+      },
     },
     title: {
-        fontSize: '1.2rem',
-        fontWeight: 'bold',
+      fontSize: '1.2rem',
+      fontWeight: 'bold',
+      color: '#00838f',
+      marginBottom: '0.5rem',
     },
-});
-
+  });
+  
 const TrainingCalendar = () => {
     const [date, setDate] = useState(new Date());
     const [allTrainings, setAllTrainings] = useState([]);
@@ -123,7 +134,7 @@ const TrainingCalendar = () => {
                 {filteredTrainings.length > 0 ? (
                     renderTrainings()
                 ) : (
-                    <Typography variant="body1">No trainings available for the selected day</Typography>
+                    <Typography variant="body1" sx={{color: "#00838f"}}>No trainings available for the selected day</Typography>
                 )}
             </div>
         </div>
