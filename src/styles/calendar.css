@@ -3,7 +3,7 @@
     width: 500px;
     max-width: 100%;
     background: #ffffff;
-    border: 1px solid #00838f;
+    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
