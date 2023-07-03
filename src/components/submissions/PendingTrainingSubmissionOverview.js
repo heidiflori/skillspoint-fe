@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/styles.css';
+import '../../styles/styles.css';
 import PendingTrainingSubmission from './PendingTrainingSubmission';
-import apiUrl from '../apiConfig';
+import apiUrl from '../../apiConfig';
 import Cookies from 'js-cookie';
 
 const PendingTrainingSubmissionOverview = () => {

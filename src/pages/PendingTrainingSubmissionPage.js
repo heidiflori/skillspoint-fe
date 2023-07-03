@@ -1,5 +1,5 @@
 import React from 'react'
-import PendingTrainingSubmissionOverview from '../components/PendingTrainingSubmissionOverview'
+import PendingTrainingSubmissionOverview from '../components/submissions/PendingTrainingSubmissionOverview'
 import Navigationbar from '../components/Navigationbar'
 import Footer from '../components/Footer'
 

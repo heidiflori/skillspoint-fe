@@ -1,5 +1,5 @@
 import React from 'react'
-import apiUrl from '../apiConfig';
+import apiUrl from '../../apiConfig';
 import Cookies from 'js-cookie';
 import { faClock, faUserTie, faChalkboardTeacher, faStar, faTags, faList, faStream } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,12 +56,13 @@ const PendingTrainingSubmission = ({ trainingSubmission }) => {
     return (
         <div className='requested-training-card'>
             <h3 className="card-title">{trainingSubmission.title} </h3>
-            <p className="card-text">From: {trainingSubmission.trainer}</p>
+            <hr></hr>
+            <p className="card-text"><span className="modal-span"><FontAwesomeIcon icon={faUserTie} className="me-2" />From: </span> {trainingSubmission.trainer}</p>
             <p className="card-text"><span className='modal-span'><FontAwesomeIcon icon={faQuoteLeft} className="me-2" />Description: </span>{trainingSubmission.description}</p>
-            <p className="card-text">{trainingSubmission.startingDate}</p>
-            <p className="card-text">{trainingSubmission.duration}</p>
-            <p className="card-text">{trainingSubmission.maximumSlots}</p>
-            <p className="card-text">{trainingSubmission.type}</p>
+            <p className="card-text"><span className="modal-span"><FontAwesomeIcon icon={faCalendar} className="me-2" />Starting date: </span>{trainingSubmission.startingDate?.slice(0, 10)}</p>
+            <p className="card-text"><span className="modal-span"><FontAwesomeIcon icon={faClock} className="me-2" />Duration: </span>{trainingSubmission.duration} hours</p>
+            <p className="card-text"><span className="modal-span"><FontAwesomeIcon icon={faCheckSquare} className="me-2" />Available slots: </span>{trainingSubmission.maximumSlots}</p>
+            <p className="card-text"><span className="modal-span"><FontAwesomeIcon icon={faStream} className="me-2" />Type: </span>{trainingSubmission.type}</p>
 
             <div className="buttons-section">
                 <button className="btn btn-primary" type='submit' onClick={handleSubmitApprove}>Approve</button>
