@@ -3,6 +3,7 @@ import Navigationbar from "../components/Navigationbar";
 import Training from "../components/Training";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
+import TrainingCalendar from "../components/TrainingCalendar";
 
 function Home() {
     return (
@@ -18,8 +19,8 @@ function Home() {
                     <Training />
                 </div>
                 <div>
-                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}></h3>
-                    {/* <Training /> */}
+                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Calendar</h3>
+                    <TrainingCalendar/>
                 </div>
             </div>           
             <Footer />

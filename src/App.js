@@ -14,6 +14,7 @@ import CreateTraining from './pages/CreateTraining';
 import PendingTrainingRequestPage from './pages/PendingTrainingRequestPage';
 import AboutUs from './pages/AboutUs';
 import HelpPage from './pages/HelpPage';
+import TrainingCalendar from './components/TrainingCalendar';
 function App() {
   return (
       <Routes>
@@ -31,6 +32,7 @@ function App() {
         <Route path="/pending-requests" exact element={<PendingTrainingRequestPage />} />    
         <Route path="/about-us" exact element={<AboutUs />} /> 
         <Route path="/help" exact element={<HelpPage />} />
+        <Route path='/calendar' exact element={<TrainingCalendar />} />
         {/* <Footer /> */}
       </Routes>
   );
