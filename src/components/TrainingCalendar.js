@@ -14,7 +14,7 @@ const useStyles = makeStyles({
       border: '1px solid #ccc', 
       borderRadius: '8px', 
       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
-      transition: 'transform 0.2s ease-in-out', 
+      transition: 'transform 0.6s ease-in-out', 
       '&:hover': {
         transform: 'scale(1.05)', 
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
