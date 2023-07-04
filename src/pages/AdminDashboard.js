@@ -12,6 +12,7 @@ function AdminDashboard(){
     return(
         <>
             <Navigationbar/>
+            <h2 style={{ marginBottom: "30px", textAlign: "center", color: "#00474e" }}>Admin Dashboard</h2>
             <div className="container" style={{ paddingTop: '80px', paddingLeft:"80px", paddingRight:"80px" }}> 
                 <Attendance/>
                 <hr style={{marginTop:"40px"}}/>

@@ -5,20 +5,22 @@ import apiUrl from '../apiConfig';
 import { Card, CardContent, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import '../styles/calendar.css'
+import { Row, Col } from 'react-bootstrap';
 
 const useStyles = makeStyles({
     card: {
       marginBottom: '1rem',
-      margin: '1rem',
       backgroundColor: '#f5f5f5', 
       border: '1px solid #ccc', 
       borderRadius: '8px', 
       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
       transition: 'transform 0.6s ease-in-out', 
+      height: '100%',
       '&:hover': {
         transform: 'scale(1.05)', 
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
       },
+      flex: '1 0 auto'
     },
     title: {
       fontSize: '1.2rem',
@@ -26,7 +28,11 @@ const useStyles = makeStyles({
       color: '#00838f',
       marginBottom: '0.5rem',
     },
-  });
+    cardContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+    },
+});
   
 const TrainingCalendar = () => {
     const [date, setDate] = useState(new Date());
@@ -89,19 +95,30 @@ const TrainingCalendar = () => {
     };
 
     const renderTrainings = () => {
-        return filteredTrainings.map(training => (
-            <Card className={classes.card} key={training.startingDate}>
-                <CardContent>
-                    <Typography className={classes.title} component="h2">
-                        Training: {training.title}
-                    </Typography>
-                    <Typography color="textSecondary" gutterBottom>
-                        Trainer: {training.trainer}
-                    </Typography>
-                </CardContent>
-            </Card>
-        ));
+        return (
+            <Row>
+                {filteredTrainings.map(training => (
+                    <Col xs={12} md={filteredTrainings.length > 0 ? 6 : 12}>
+                        <div className={classes.cardContainer}>
+                            <Card className={classes.card} key={training.startingDate}>
+                                <CardContent style={{backgroundColor:'white', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'}}>
+                                    <Typography className={classes.title} component="h2">
+                                        Training: {training.title}
+                                    </Typography>
+                                    <Typography color="textSecondary" gutterBottom>
+                                        Trainer: {training.trainer}
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </Col>
+                ))}
+            </Row>
+        );
     };
+
+   
+
 
     const tileContent = ({ date, view }) => {
         if (view === 'month') {

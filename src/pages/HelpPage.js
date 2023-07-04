@@ -21,7 +21,7 @@ function HelpPage() {
 
                 
                 <div className="section">
-                    <h3>General Help <FontAwesomeIcon icon={faQuestionCircle} className="me-2"/></h3>
+                    <h2>General Help <FontAwesomeIcon icon={faQuestionCircle} className="me-2"/></h2>
                     <p style={{fontSize:20, textAlign:"justify"}}>Welcome to our website! We are here to provide you with assistance and guidance to make the most out of your experience. Whether you are new to our platform or have been with us for a while, we are here to help you navigate through our features and find the information you need.</p>
                     <p style={{fontSize:20, textAlign:"justify"}}>Our website features a user-friendly navigation bar at the top, allowing you to easily access various sections. You can explore the Home page for the latest updates and announcements, browse through our wide range of training programs and courses under Trainings, access the trainings you have already enrolled in and track your progress in the Enrolled Trainings section, and manage your training requests in the Requested Trainings section. Additionally, you can find the Profile and Logout options in the navigation bar for managing your account settings.</p>
                     <p style={{fontSize:20, textAlign:"justify"}}>At the bottom of the page, you will find a footer that provides quick links to other important sections of our website. You can learn more about our organization, our mission, and the dedicated team behind it in the About Us section. If you need further assistance, you can access our comprehensive Help section, where you can find answers to frequently asked questions (FAQs) and get further support.</p>
@@ -29,7 +29,7 @@ function HelpPage() {
                 </div>
 
                 <div>
-                    <h3 className="mb-3 mt-5">FAQ <FontAwesomeIcon icon={faQuestionCircle} className="me-2"/></h3>
+                    <h2 className="mb-3 mt-5">FAQ <FontAwesomeIcon icon={faQuestionCircle} className="me-2"/></h2>
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                             <Typography style={{fontSize:"18px"}}><span className="modal-span">Question 1:</span> How do I view more details for a training?</Typography>

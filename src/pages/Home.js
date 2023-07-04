@@ -19,7 +19,7 @@ function Home() {
                     <Training />
                 </div>
                 <div>
-                    <h3 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Calendar</h3>
+                    <h2 style={{color: '#00474e', textAlign: 'center', marginTop: 50, marginBottom: 30}}>Calendar</h2>
                     <TrainingCalendar/>
                 </div>
             </div>           
