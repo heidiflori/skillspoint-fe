@@ -61,7 +61,7 @@ function Training() {
     return (
         <div className="container">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                {courses.slice(0, visibleCourses).map((course, index) => (
+                {[...courses].reverse().slice(0, visibleCourses).map((course, index) => (
                     <div key={index} className="col mb-4" onClick ={() => handleCardClick(course)}>
                         <div className="card h-100 d-flex flex-column">
                             <div className="card-body">
