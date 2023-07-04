@@ -20,7 +20,7 @@ function AboutUs(){
                 </div>
 
                 <div className="container mt-1 mb-2" style={{display:"flex", justifyContent:"center"}}>
-                    <h2>About Us</h2>
+                    <h2 style={{color: "#00474e"}}>About Us</h2>
                 </div>
 
                 <div className="section">
@@ -38,88 +38,88 @@ function AboutUs(){
                     <div className="d-flex flex-wrap justify-content-between">
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                                <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Laura</h5>
+                                <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/laura.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Laura</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>BA</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Irina</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/irina.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Irina</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>QA</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Mihai</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/mihai_g.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Mihai</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Heidi</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/heidi.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Heidi</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Mihai</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/mihai_l.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Mihai</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Andrei</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/andrei.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Andrei</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Paul</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/paul.png" alt="Card image" style={{border: '5px solid #00838F', borderRadius:"40px"}}/>
+                                <h5 className="card-title mt-2">Paul</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Beatrice</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/beatrice.png" alt="Card image" />
+                                <h5 className="card-title mt-2">Beatrice</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>BA</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Andu</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/andu.png" alt="Card image" />
+                                <h5 className="card-title mt-2">Andu</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Alex</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/alex.png" alt="Card image" />
+                                <h5 className="card-title mt-2">Alex</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>DEV</p>
                             </div>
                         </div>
                         <div className="card card-custom m-2">
                             <div className="card-body text-center">
-                            <img className="card-img-top" src="url_to_your_image" alt="Card image" />
-                                <h5 className="card-title">Claudiu</h5>
+                            <img className="card-img-top" src="https://storage.googleapis.com/skillspoint-images/claudiu.png" alt="Card image" />
+                                <h5 className="card-title mt-2">Claudiu</h5>
                                 <hr/>
                                 <p className="card-text" style={{fontWeight:"bold"}}>QA</p>
                             </div>

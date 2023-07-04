@@ -82,9 +82,8 @@ const Attendance = () => {
 
   return (
     <>
-      <Navigationbar />
-      <div className='container' style={{ paddingTop: '100px' }}>
-        <h2 style={{ marginBottom: "30px", textAlign: "center" }}>Trainings Attendance</h2>
+      <div className='container' style={{ paddingTop: '10px'}}>
+        <h2 style={{ marginBottom: "30px", textAlign: "center", color: "#00474e" }}>Trainings Attendance</h2>
         {trainings.map((training) => (
           <Accordion key={training.id}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -121,7 +120,6 @@ const Attendance = () => {
           </Accordion>
         ))}
       </div>
-      <Footer />
     </>
   );
 };
