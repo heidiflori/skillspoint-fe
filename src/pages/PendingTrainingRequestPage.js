@@ -1,9 +1,8 @@
-// import Navbar from '../components/Navbar'
 import Navigationbar from '../components/Navigationbar'
 import PendingTrainingRequestOverview from '../components/requests/PendingTrainingRequestOverview'
 import Footer from '../components/Footer'
-const PendingTrainingRequestPage = () => {
 
+const PendingTrainingRequestPage = () => {
 
   return (
     <>
@@ -11,6 +10,7 @@ const PendingTrainingRequestPage = () => {
         <h2 className="text-center mt-4 mb-5" style={{ color: "#00474e" }}>Manage Requested Trainings</h2>
         <PendingTrainingRequestOverview />
       </div>
+      <Footer/>
     </>
   )
 

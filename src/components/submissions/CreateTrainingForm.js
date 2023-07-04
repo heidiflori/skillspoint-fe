@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react';
-import apiUrl from '../apiConfig.js';
+import apiUrl from '../../apiConfig.js';
 import Cookies from 'js-cookie';
-import Footer from "../components/Footer";
+import Footer from "../Footer.js";
 import { TextField } from '@mui/material';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -68,7 +68,7 @@ const CreateTrainingForm = () => {
                     </div>
                     <div className="form-group">
                         <label for="date-picker">Starting date</label>
-                        <input className='form-control' name='startingDate' type='date' value={input.staringDate} onChange={handleChangeInput}/>                    
+                        <input className='form-control' name='startingDate' type='date' value={input.startingDate} onChange={handleChangeInput}/>                    
                     </div>
                     
                     {/* <TextField type='date' name='startingDate' label="startingDate" value={input.staringDate}/> */}

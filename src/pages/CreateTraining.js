@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigationbar from '../components/Navigationbar'
-import CreateTrainingForm from '../components/CreateTrainingForm'
+import CreateTrainingForm from '../components/submissions/CreateTrainingForm'
 import Footer from '../components/Footer'
 
 const CreateTraining = () => {

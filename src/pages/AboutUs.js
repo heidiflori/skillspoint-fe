@@ -28,11 +28,11 @@ function AboutUs(){
                 </div>
                 <div className="section">
                     <h3>Our Mission <FontAwesomeIcon icon={faBullseye} className="me-2"/> </h3>
-                    <p style={{fontSize:20, textAlign:"justify"}}>At SkillsPoint, our mission is to provide a dynamic learning platform where users can both teach and participate in courses taught by other trainers. We believe in fostering a community that empowers individuals to share their knowledge and expertise, while also offering opportunities for continuous learning and personal growth. By connecting trainers and learners from diverse backgrounds, we aim to create an inclusive environment that promotes collaboration, skill development, and the exchange of ideas. Together, we strive to unlock the full potential of every individual, making education accessible and engaging for all.</p>
+                    <p style={{fontSize:20, textAlign:"justify"}}>At SkillMaster, our mission is to provide a dynamic learning platform where users can both teach and participate in courses taught by other trainers. We believe in fostering a community that empowers individuals to share their knowledge and expertise, while also offering opportunities for continuous learning and personal growth. By connecting trainers and learners from diverse backgrounds, we aim to create an inclusive environment that promotes collaboration, skill development, and the exchange of ideas. Together, we strive to unlock the full potential of every individual, making education accessible and engaging for all.</p>
                 </div>
                 <div className="section">
                     <h3>Our Team <FontAwesomeIcon icon={faUsers} className="me-2"/> </h3>
-                    <p style={{fontSize:20, textAlign:"justify"}}>Meet the talented individuals behind SkillsPoint. With a combined expertise in software development, quality assurance, business analysis, and mentoring, our team of 11 individuals is dedicated to delivering the best learning experience to our users.</p>
+                    <p style={{fontSize:20, textAlign:"justify"}}>Meet the talented individuals behind SkillMaster. With a combined expertise in software development, quality assurance, business analysis, and mentoring, our team of 11 individuals is dedicated to delivering the best learning experience to our users.</p>
                 </div>
                 <div className="container mt-5">
                     <div className="d-flex flex-wrap justify-content-between">
