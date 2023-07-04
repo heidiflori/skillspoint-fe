@@ -40,8 +40,10 @@ const FileUploadComponent = ({ trainingId }) => {
       <input {...getInputProps()} />
       {
         isDragActive ?
-          <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}}>
-            <p style={{fontSize:"15px", color:"#CFCFCF"}}>Drop the files here ...</p>
+          <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", gap: "1px"}}>
+            <p style={{fontSize:"15px", color:"#BFBFBF"}}>Drop the files here...</p>
+            <p style={{fontSize:"40px", color:"#BFBFBF"}}><FontAwesomeIcon icon={faUpload} /></p>
+            <p style={{fontSize:"15px", color:"#BFBFBF"}}>(.pdf, .zip)</p>
           </div> :
           <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", gap: "1px"}}>
             <p style={{fontSize:"15px", color:"#BFBFBF"}}>Drag and drop files here</p>

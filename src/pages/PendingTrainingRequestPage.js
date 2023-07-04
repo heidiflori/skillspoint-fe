@@ -6,9 +6,8 @@ const PendingTrainingRequestPage = () => {
 
   return (
     <>
-      <Navigationbar />
-      <div className='container' style={{ paddingTop: '70px' }}>
-        <h2 className="text-center mt-4 mb-5" style={{ color: "#00838f" }}>Manage Requested Trainings</h2>
+      <div className='container' style={{ paddingTop: '10px'}}>
+        <h2 className="text-center mt-4 mb-5" style={{ color: "#00474e" }}>Manage Requested Trainings</h2>
         <PendingTrainingRequestOverview />
       </div>
       <Footer/>

@@ -15,11 +15,7 @@ function Footer() {
   
   return (
     <footer className="footer mt-4 py-3 text-center" style={{ backgroundColor: '#f1f1f1' }}>
-      <div className="container d-flex align-items-center justify-content-center w-100 mt-1 mb-4">
-        <Link to="/about-us" className="footer-link" style={linkStyle} onMouseOver={e => Object.assign(e.target.style, hoverStyle)} onMouseOut={e => Object.assign(e.target.style, linkStyle)}>About Us</Link>
-        <span className="footer-divider"></span>
-        <Link to="/help" className="footer-link" style={linkStyle} onMouseOver={e => Object.assign(e.target.style, hoverStyle)} onMouseOut={e => Object.assign(e.target.style, linkStyle)}>Help</Link>
-      </div>
+      
       <div className="container d-flex align-items-center justify-content-center w-100 mb-2">
         <span className="text-muted">DBCloudSchool - Team 7 - SkillMaster</span>
       </div>

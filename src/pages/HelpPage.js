@@ -16,7 +16,7 @@ function HelpPage() {
                 
 
                 <div className="container mt-2 mb-2" style={{display:"flex", justifyContent:"center"}}>
-                    <h2>Help Page</h2>
+                    <h2 style={{color: "#00474e"}}>Help Page</h2>
                 </div>
 
                 
