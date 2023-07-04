@@ -39,7 +39,7 @@ const PendingTrainingSubmissionOverview = () => {
     return (
         <>
             <div className='requested-container'>
-                {submissions.map((trainingSubmission, index) => {
+                {Array.isArray(submissions) && submissions.map((trainingSubmission, index) => {
                     return (
                         <div key={index}>
                             <PendingTrainingSubmission trainingSubmission={trainingSubmission}/>

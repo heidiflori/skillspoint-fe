@@ -41,7 +41,7 @@ function Review({selectedTraining, reviewUpdateTrigger}) {
         <div>
             <p style={{fontSize:"16px"}}>({reviews.length} Reviews)</p>
         {/* Se afișează toate review-urile dacă `showAll` este true, altfel doar primele 3 */}
-        {reviews.slice(0, showAll ? reviews.length : 3).map((review, index) => (
+        {[...reviews].reverse().slice(0, showAll ? reviews.length : 3).map((review, index) => (
             <Container className="rounded mt-1" style={{backgroundColor:"#F8F8F8" }}>
                     <p style={{fontSize:"16px"}}><FontAwesomeIcon icon={faUser} /> {review.user.username} <Rating value={review.rating} readOnly size="small"/></p>
                     <p>{review.comment}</p>

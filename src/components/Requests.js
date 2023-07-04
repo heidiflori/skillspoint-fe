@@ -39,8 +39,7 @@ function Requests() {
     }, [token]);
 
     const showMoreTrainings = () => {
-        setVisibleTrainings((prevVisibleTrainings) => prevVisibleTrainings + 6);
-        setShowLessVisible(true);
+        setVisibleTrainings(trainings.length);
     };
 
     const showLessTrainings = () => {
@@ -92,14 +91,14 @@ function Requests() {
                     </div>
                 ))}
             </div>
-            {visibleTrainings < trainings.length && !showLessVisible ? (
+            {visibleTrainings < trainings.length ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showMoreTrainings}>
                         <FontAwesomeIcon icon={faChevronDown} className="me-2"/>Show More
                     </button>
                 </div>
             ) : null}
-            {showLessVisible ? (
+            {visibleTrainings === trainings.length ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showLessTrainings}>
                         <FontAwesomeIcon icon={faChevronUp} className="me-2"/>Show Less

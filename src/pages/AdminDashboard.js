@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faBullseye } from '@fortawesome/free-solid-svg-icons';
 import Attendance from "./Attendance";
 import PendingTrainingRequestPage from "../pages/PendingTrainingRequestPage";
-
-
+import PendingTrainingSubmissionPage from "../pages/PendingTrainingSubmissionPage";
 function AdminDashboard(){
 
     return(
@@ -18,7 +17,7 @@ function AdminDashboard(){
                 <hr style={{marginTop:"40px"}}/>
                 <PendingTrainingRequestPage/>
                 <hr/>
-
+                <PendingTrainingSubmissionPage/>
             </div>
             <Footer/>
         </>

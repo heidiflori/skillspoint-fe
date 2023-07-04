@@ -40,8 +40,7 @@ function Training() {
     }, [token]);
 
     const showMoreCourses = () => {
-        setVisibleCourses((prevVisibleCourses) => prevVisibleCourses + 6);
-        setShowLessVisible(true);
+        setVisibleCourses(courses.length);
     };
 
     const showLessCourses = () => {
@@ -76,14 +75,14 @@ function Training() {
                     </div>
                 ))}
             </div>
-            {visibleCourses < courses.length && !showLessVisible ? (
+            {visibleCourses < courses.length ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showMoreCourses}>
-                       <FontAwesomeIcon icon={faChevronDown} className="me-2"/>Show More
+                    <FontAwesomeIcon icon={faChevronDown} className="me-2"/>Show More
                     </button>
                 </div>
             ) : null}
-            {showLessVisible ? (
+            {visibleCourses === courses.length ? (
                 <div className="text-center mt-4 mb-5">
                     <button className="btn btn-primary" onClick={showLessCourses}>
                         <FontAwesomeIcon icon={faChevronUp} className="me-2"/>Show Less

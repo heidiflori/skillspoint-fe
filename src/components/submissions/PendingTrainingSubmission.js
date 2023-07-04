@@ -43,7 +43,7 @@ const PendingTrainingSubmission = ({ trainingSubmission }) => {
         }
 
         const response = await fetch(path, {
-            method: "DELETE",
+            method: "PUT",
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "*",

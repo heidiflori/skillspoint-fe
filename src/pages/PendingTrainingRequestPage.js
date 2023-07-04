@@ -10,7 +10,6 @@ const PendingTrainingRequestPage = () => {
         <h2 className="text-center mt-4 mb-5" style={{ color: "#00474e" }}>Manage Requested Trainings</h2>
         <PendingTrainingRequestOverview />
       </div>
-      <Footer/>
     </>
   )
 
